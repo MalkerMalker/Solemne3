@@ -2,11 +2,9 @@ import streamlit as st
 import webbrowser
 import pandas as pd
 import numpy as np
-st.markdown("""
-    <style>
-        .css-1d391kg {
-            background-color: #ADD8E6;  # Color de fondo de la barra lateral
-        }
-    </style>
-""", unsafe_allow_html=True)
-
+[theme]
+primaryColor="#FF4B4B"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#31333F"
+font="sans serif"
