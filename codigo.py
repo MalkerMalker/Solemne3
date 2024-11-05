@@ -4,7 +4,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #f0f0f5;
+        background-color: #000000;
     }
     </style>
     """, 
