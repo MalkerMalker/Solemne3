@@ -3,5 +3,4 @@ import webbrowser
 import pandas as pd
 import numpy as np
 
-st.title("op.gg")
-st.markdown()
+st.markdown("op.gg")
