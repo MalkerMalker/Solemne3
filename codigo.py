@@ -1,1 +1,1 @@
-st.title("op.gg")
+st.tittle("op.gg")
