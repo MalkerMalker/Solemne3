@@ -4,15 +4,20 @@ import pandas as pd
 import altair as alt
 import base64
 
-with open("imagenes/fondo.jpg", "rb") as image_file: bg_image = base64.b64encode(image_file.read()).decode()
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
 # Ruta de tu imagen de fondo
-bg_image = "imagenes/fondo.jpg"
+bg_image_path = "imagenes/fondo.jpg"
+bg_image_base64 = get_base64_of_bin_file(bg_image_path)
 
 # CSS para el fondo
 page_bg_img = f"""
 <style>
     .stApp {{
-        background-image: url("data:image/jpg;base64,{bg_image}");
+        background-image: url("data:image/jpg;base64,{bg_image_base64}");
         background-size: cover;
     }}
 </style>
