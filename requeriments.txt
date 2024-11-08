@@ -3,3 +3,4 @@ matplotlib
 streamlit
 webbrowser
 numpy
+base64
