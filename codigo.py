@@ -21,7 +21,6 @@ st.markdown(
 )
 
 
-st.image("imagenes/letras.png")
-st.sidebar.image("imagenes/logo.png")
+
 st.title("League Of Legends")
 st.write(".")
