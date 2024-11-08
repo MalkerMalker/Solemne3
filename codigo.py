@@ -8,8 +8,10 @@ st.markdown(
     <style>
     .reportview-container {
         background: url("https://www.wallpaperbetter.com/wallpaper/806/22/557/league-of-legends-landscape-magic-hd-1080P-wallpaper.jpg");
+        background-size: cover;  /* Ensures the image covers the entire container */
+        background-position: center;  /* Centers the image */
     }
-   </style>
+    </style>
     """,
     unsafe_allow_html=True
 )
