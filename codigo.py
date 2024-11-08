@@ -4,9 +4,6 @@ import pandas as pd
 import altair as alt
 import base64
 
-# Ruta a la imagen local
-image_path = "imagenes/fondo.jpg"
-
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -25,7 +22,7 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('./imagenes/fondo.jpg')
+set_background('./imagenes/fondo.png')
 
 
 
