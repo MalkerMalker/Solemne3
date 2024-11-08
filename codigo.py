@@ -19,6 +19,7 @@ page_bg_img = f"""
     .stApp {{
         background-image: url("data:image/jpg;base64,{bg_image_base64}");
         background-size: cover;
+        background-position: center;  /* Centra la imagen */
     }}
 </style>
 """
