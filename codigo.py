@@ -8,12 +8,12 @@ st.markdown(
     <style>
     body {
         background: url("https://www.wallpaperbetter.com/wallpaper/806/22/557/league-of-legends-landscape-magic-hd-1080P-wallpaper.jpg");
-        background-size: cover;  /* Hace que la imagen cubra toda la pantalla */
-        background-position: center;  /* Centra la imagen */
-        background-attachment: fixed;  /* Hace que el fondo no se desplace al hacer scroll */
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: fixed; 
     }
     .reportview-container {
-        background: transparent;  /* Asegura que no haya un fondo blanco en el contenedor */
+        background: transparent; 
     }
     </style>
     """,
