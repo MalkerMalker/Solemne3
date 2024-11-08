@@ -7,23 +7,26 @@ import base64
 # Ruta a la imagen local
 image_path = "imagenes/fondo.jpg"
 
-# Usar st.markdown para insertar el estilo CSS y establecer la imagen de fondo
-st.markdown(
-    f"""
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
     <style>
-    body {{
-        background: url("{image_path}");
-        background-size: cover;  /* Hace que la imagen cubra toda la pantalla */
-        background-position: center;  /* Centra la imagen */
-        background-attachment: fixed;  /* Mantiene el fondo fijo mientras haces scroll */
-    }}
-    .reportview-container {{
-        background: transparent;  /* Asegura que no haya un fondo blanco en el contenedor */
-    }}
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+set_background('./imagenes/fondo.jpg')
+
 
 
 st.image("imagenes/letras.png")
