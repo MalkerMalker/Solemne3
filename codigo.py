@@ -4,6 +4,7 @@ import pandas as pd
 import altair as alt
 import base64
 
+with open("imagenes/fondo.jpg", "rb") as image_file: bg_image = base64.b64encode(image_file.read()).decode()
 # Ruta de tu imagen de fondo
 bg_image = "imagenes/fondo.jpg"
 
