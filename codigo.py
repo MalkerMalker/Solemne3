@@ -6,10 +6,14 @@ import altair as alt
 st.markdown(
     """
     <style>
-    .reportview-container {
+    body {
         background: url("https://www.wallpaperbetter.com/wallpaper/806/22/557/league-of-legends-landscape-magic-hd-1080P-wallpaper.jpg");
-        background-size: cover;  /* Ensures the image covers the entire container */
-        background-position: center;  /* Centers the image */
+        background-size: cover;  /* Hace que la imagen cubra toda la pantalla */
+        background-position: center;  /* Centra la imagen */
+        background-attachment: fixed;  /* Hace que el fondo no se desplace al hacer scroll */
+    }
+    .reportview-container {
+        background: transparent;  /* Asegura que no haya un fondo blanco en el contenedor */
     }
     </style>
     """,
