@@ -25,14 +25,14 @@ page_bg_img = f"""
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Personajes', 'Competitivo', 'Acerca de'])
-if opcion == 'Inicio':
-    st.write('Bienvenido a la sección de inicio.')
-elif opcion == 'Datos':
+opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
+if opcion == 'Información':
+    st.write('Bienveniddo a la sección de inicio.')
+elif opcion == 'Campeones':
     st.write('Aquí van los datos.')
-elif opcion == 'Gráficos':
+elif opcion == 'Competitivo':
     st.write('Aquí se mostrarían los gráficos.')
-elif opcion == 'Información':
+elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
 
 st.image("imagenes/letras.png")
