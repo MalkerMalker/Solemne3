@@ -25,18 +25,7 @@ page_bg_img = f"""
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
-
-
-# Opciones de ejemplo
-options = ['Información', 'Campeones', 'Acerca de']
-# Crear el selectbox en la barra lateral
-selected_option = st.sidebar.selectbox("Selecciona una opción", options)
-# Mostrar la opción seleccionada
-st.write(f"Has seleccionado: {selected_option}")
-st.image("imagenes/letras.png")
-st.sidebar.image("imagenes/logo.png")
-
+opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de']
 
 if opcion == 'Información':
     st.markdown("<h1 style='color: white;'>Información</h1>", unsafe_allow_html=True)
