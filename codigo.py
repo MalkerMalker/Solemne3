@@ -14,7 +14,8 @@ def get_base64_of_bin_file(bin_file):
 bg_image_path = "imagenes/fondo.jpg"
 bg_image_base64 = get_base64_of_bin_file(bg_image_path)
 
- <img src="imagenes/logo.png" alt="Texto alternativo" width="300"/>
+![Texto alternativo](imagenes/logo.png)
+
 
 
 page_bg_img = f"""
