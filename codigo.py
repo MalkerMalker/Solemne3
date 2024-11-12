@@ -44,7 +44,7 @@ elif opcion == 'Competitivo':
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
     st.video(video_url)
     <img id="zoom_04" src="small/https://imagenes/image3.jpg"
-     data-zoom-image="large/image1.jpg"/>
+     data-zoom-image=/imagenes/image3.jpg>
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
 
