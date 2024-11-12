@@ -10,9 +10,9 @@ def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
     return base64.b64encode(data).decode()
+
 bg_image_path = "imagenes/fondo.jpg"
 bg_image_base64 = get_base64_of_bin_file(bg_image_path)
-
 
 page_bg_img = f"""
 <style>
@@ -35,36 +35,23 @@ if opcion == 'Información':
     st.markdown("""
     <p style='color: white;'>League of Legends es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games. Inspirándose en Defense of the Ancients, un mapa personalizado para Warcraft III, los fundadores de Riot buscaron desarrollar un juego independiente del mismo género. Desde su lanzamiento en octubre de 2009, LoL ha sido un juego gratuito y se monetiza a través de la compra de elementos para la personalización de personajes y otros accesorios. El juego está disponible para Microsoft Windows y macOS.</p>
     """, unsafe_allow_html=True)
+    
 elif opcion == 'Campeones':
-<section>
- <img src="imagenes/fondo.jpg">
- <img src="imagenes/fondo.jpg">
- <img src="imagenes/fondo.jpg">
- <img src="imagenes/fondo.jpg">
-    section{
-  display: flex;
-  width: 600px;
-  height: 430px;
-}
-section img{
-  width: 0px;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: .8;
-  transition: .5s ease;
-}
-section img:hover{
-  cursor: crosshair;
-  width: 300px;
-  opacity: 1;
-  filter: contrast(120%);
-}
+    st.write('Aquí van los datos.')
+    
 elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
     st.video(video_url)
+    
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
+
+
+
+
+
+
 
 
 
