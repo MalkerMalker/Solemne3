@@ -43,8 +43,6 @@ elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
     st.video(video_url)
-    <img id="zoom_04" src="small/https://imagenes/image3.jpg"
-     data-zoom-image=/imagenes/image3.jpg>
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
 
