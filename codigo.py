@@ -29,6 +29,9 @@ page_bg_img = f"""
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
+st.sidebar.image('imagenes/logo.png', use_column_width=True)
+st.image('imagenes/letras.png', use_column_width=True)
+
 opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
 
 if opcion == 'Información':
