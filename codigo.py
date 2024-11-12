@@ -25,8 +25,7 @@ page_bg_img = f"""
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-
-
+opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Personajes', 'Competitivo', 'Acerca de'])
 
 st.image("imagenes/letras.png")
 st.sidebar.image("imagenes/logo.png")
@@ -38,3 +37,4 @@ st.markdown("""
 
 video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
 st.video(video_url)
+
