@@ -26,8 +26,17 @@ page_bg_img = f"""
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
+
+
+st.image("imagenes/letras.png")
+st.sidebar.image("imagenes/logo.png")
+
+
 if opcion == 'Información':
-    st.write('Bienveniddo a la sección de inicio.')
+    st.markdown("<h1 style='color: white;'>Información</h1>", unsafe_allow_html=True)
+    st.markdown("""
+    <p style='color: white;'>League of Legends es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games. Inspirándose en Defense of the Ancients, un mapa personalizado para Warcraft III, los fundadores de Riot buscaron desarrollar un juego independiente del mismo género. Desde su lanzamiento en octubre de 2009, LoL ha sido un juego gratuito y se monetiza a través de la compra de elementos para la personalización de personajes y otros accesorios. El juego está disponible para Microsoft Windows y macOS.</p>
+    """, unsafe_allow_html=True)
 elif opcion == 'Campeones':
     st.write('Aquí van los datos.')
 elif opcion == 'Competitivo':
@@ -35,13 +44,7 @@ elif opcion == 'Competitivo':
 elif opcion == 'Acerca de':
     st.write('Aquí se mostraría la información adicional.')
 
-st.image("imagenes/letras.png")
-st.sidebar.image("imagenes/logo.png")
-st.markdown("<h1 style='color: white;'>Información</h1>", unsafe_allow_html=True)
 
-st.markdown("""
-<p style='color: white;'>League of Legends es un videojuego multijugador de arena de batalla en línea desarrollado y publicado por Riot Games. Inspirándose en Defense of the Ancients, un mapa personalizado para Warcraft III, los fundadores de Riot buscaron desarrollar un juego independiente del mismo género. Desde su lanzamiento en octubre de 2009, LoL ha sido un juego gratuito y se monetiza a través de la compra de elementos para la personalización de personajes y otros accesorios. El juego está disponible para Microsoft Windows y macOS.</p>
-""", unsafe_allow_html=True)
 
 video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
 st.video(video_url)
