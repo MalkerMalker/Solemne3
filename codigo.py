@@ -25,7 +25,7 @@ page_bg_img = f"""
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de']
+opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
 
 if opcion == 'Información':
     st.markdown("<h1 style='color: white;'>Información</h1>", unsafe_allow_html=True)
