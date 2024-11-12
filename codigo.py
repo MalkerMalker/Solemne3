@@ -13,6 +13,7 @@ def get_base64_of_bin_file(bin_file):
 bg_image_path = "imagenes/fondo.jpg"
 bg_image_base64 = get_base64_of_bin_file(bg_image_path)
 
+
 page_bg_img = f"""
 <style>
     .stApp {{
