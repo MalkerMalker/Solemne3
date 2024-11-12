@@ -23,6 +23,15 @@ page_bg_img = f"""
     }}
 </style>
 """
+contraseñareal = "12345678"
+rutreal = "220149978"
+nombredeinvocador = st.sidebar.text_input("Nombre de invocador")
+contraseña = st.sidebar.text_input("Contraseña", type="password")
+if st.sidebar.button("Ingresar"):
+    if contraseña == contraseñareal and rut == rutreal:
+        st.write("Has ingresado correctamente")
+    else:
+        st.write("Nombre de invocador o contraseña incorrectos. Intente de nuevo.")
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Personajes', 'Competitivo', 'Acerca de'])
