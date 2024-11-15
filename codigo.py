@@ -167,7 +167,7 @@ if opcion == 'Información':
     st.altair_chart(chart, use_container_width=True)
     
 elif opcion == 'Campeones':
-    col1, col2 = st.columns(10)
+    col1, col2, col3, col4, col5, col6, col7, col8, col9, col10 = st.columns(10)
     with col1:
         st.image("imagenes/eclipseinf.jpg", caption="Objeto ideal para comprar cuando eres luchador, te otorga escudo, daño a enemigos con mucha vida y reestablecimiento de habilidades.")
     with col2:
