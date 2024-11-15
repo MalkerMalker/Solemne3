@@ -168,7 +168,22 @@ if opcion == 'Información':
     
 elif opcion == 'Campeones':
     st.write('Aquí van los datos.')
-    
+    st.markdown(
+    """
+    <div style="margin-left: -75px; margin-right: -75px;">
+        <h3 style="color: white;">Abrete paso</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>Para llegar hasta el nexo enemigo, tu equipo tendrá que avanzar por al menos una calle. Hay estructuras defensivas que bloquean tu avance: las torretas y los inhibidores. Cada calle cuenta con tres torretas y un inhibidor. Además, cada nexo tiene dos torretas adicionales.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.image('imagenes/torretainhibidores.jpg', use_column_width=True)    
 elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
