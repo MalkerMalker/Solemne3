@@ -167,22 +167,12 @@ if opcion == 'Información':
     st.altair_chart(chart, use_container_width=True)
     
 elif opcion == 'Campeones':
-    st.markdown(
-    """
-    <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">Abrete paso</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
-    st.markdown("""
-    <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>League of Legends cuenta con una amplia cantidad de campeones, estos tienen distintos tipos de roles, entre ellos la topline, la jungla, la midlane y la botline. </p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.image('imagenes/campeones.png', use_column_width=True)    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("imagenes/eclipseinf.jpg", caption="Objeto ideal para comprar cuando eres luchador, te otorga escudo, daño a enemigos con mucha vida y reestablecimiento de habilidades.")
+    with col2:
+        st.image("imagenes/ludencompanioninf.jpg", caption="Objeto ideal para comprar cuando eres mago, te otorga daño magico dispersivo, maná y reestablecimiento de habilidades.")
+           
 elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
