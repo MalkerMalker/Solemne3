@@ -184,7 +184,7 @@ elif opcion == 'Campeones':
         st.image("imagenes/eclipseinf.jpg")
     with col8:
         st.image("imagenes/ludencompanioninf.jpg")
-    with co9:
+    with col9:
         st.image("imagenes/eclipseinf.jpg")
     with col10:
         st.image("imagenes/ludencompanioninf.jpg")
