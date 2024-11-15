@@ -182,7 +182,7 @@ elif opcion == 'Campeones':
         <p style='color: white;'>League of Legends cuenta con una amplia cantidad de campeones, estos tienen distintos tipos de roles, entre ellos la topline, la jungla, la midlane y la botline. </p>
     </div>
     """, unsafe_allow_html=True)
-    st.image('imagenes/torretainhibidores.jpg', use_column_width=True)    
+    st.image('campeones.png', use_column_width=True)    
 elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
