@@ -167,7 +167,6 @@ if opcion == 'Información':
     st.altair_chart(chart, use_container_width=True)
     
 elif opcion == 'Campeones':
-    st.write('Aquí van los datos.')
     st.markdown(
     """
     <div style="margin-left: -75px; margin-right: -75px;">
@@ -180,7 +179,7 @@ elif opcion == 'Campeones':
     <div style="margin-left: -75px;">
     <div style="margin-right: -75px;">
     <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Para llegar hasta el nexo enemigo, tu equipo tendrá que avanzar por al menos una calle. Hay estructuras defensivas que bloquean tu avance: las torretas y los inhibidores. Cada calle cuenta con tres torretas y un inhibidor. Además, cada nexo tiene dos torretas adicionales.</p>
+        <p style='color: white;'>League of Legends cuenta con una amplia cantidad de campeones, estos tienen distintos tipos de roles, entre ellos la topline, la jungla, la midlane y la botline. </p>
     </div>
     """, unsafe_allow_html=True)
     st.image('imagenes/torretainhibidores.jpg', use_column_width=True)    
