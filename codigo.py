@@ -4,9 +4,16 @@ import pandas as pd
 import altair as alt
 import base64
 
-audio_file = open("League of Legends - Warriors.mp3", "rb")
-st.audio(audio_file, format="audio/mp3")
+import streamlit as st
 
+audio_html = """
+<audio autoplay loop style="display:none;">
+    <source src="League of Legends - Warrios.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+"""
+# Renderiza el HTML
+st.components.v1.html(audio_html, height=0)
 
 
 #base de datos pandas en informacion
