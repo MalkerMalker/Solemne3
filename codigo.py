@@ -254,7 +254,7 @@ st.markdown("</div>", unsafe_allow_html=True)
 # Sección de Profesora pegada a la izquierda con mayor tamaño de fuente
 st.markdown(
     """
-    <div style="margin-top: 10px; margin-left: 20px;">
+    <div style='margin-left: 20px;'>", unsafe_allow_html=True>
         <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
         <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Monica Otero Ferreiro</p>
     </div>
