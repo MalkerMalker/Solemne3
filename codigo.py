@@ -189,14 +189,6 @@ if opcion == 'Información':
     #with col10:
         st.image("imagenes/ludencompanioninf.jpg")
 
-imagenes = ["imagenes/eclipseinf.jpg", "imagenes/ludencompanioninf.jpg"] * 5  # Alterna las imágenes
-
-# Crear las columnas dinámicamente
-cols = st.columns(10)
-
-# Asignar las imágenes a cada columna
-for i, col in enumerate(cols):
-    col.image(imagenes[i])  # Asigna la imagen correspondiente a cada columna
 
 elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
