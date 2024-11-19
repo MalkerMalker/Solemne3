@@ -206,76 +206,66 @@ elif opcion == 'Campeones':
 
 
 elif opcion == 'Competitivo':
-    st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
-    video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
-    st.video(video_url)
-    
-elif opcion == 'Acerca de':
-# Encabezado general con una fuente elegante y colores más estilizados
-    st.markdown(
+# Encabezado principal
+st.markdown(
     """
-    <div style="text-align: center; margin-bottom: 20px;">
-        <h1 style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 3em;">Acerca De</h1>
+    <div style="text-align: center; margin-bottom: 15px;">
+        <h1 style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 2em;">Acerca De</h1>
     </div>
     """,
     unsafe_allow_html=True
-    )
+)
 
 # Sección de Integrantes
-    st.markdown(
+st.markdown(
     """
-    <div style="text-align: center; margin-bottom: 10px;">
-        <h3 style="color: #FFAD33; font-family: 'Roboto', sans-serif; font-size: 2em;">Integrantes</h3>
+    <div style="margin-bottom: 10px;">
+        <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
     </div>
     """,
     unsafe_allow_html=True
-    )
+)
 
-# Lista de Integrantes
+# Lista de Integrantes alineada a la izquierda
 integrantes = ["Diego Abarca", "Cristobal Camousseight", "Rodrigo Manríquez"]
+st.markdown("<div style='margin-left: 20px;'>", unsafe_allow_html=True)  # Contenedor para alineación izquierda
 for integrante in integrantes:
     st.markdown(
         f"""
-        <div style="text-align: center; margin: 5px 0;">
-            <p style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 1.2em;">{integrante}</p>
+        <div style="margin: 3px 0;">
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 12px;">{integrante}</p>
         </div>
         """,
         unsafe_allow_html=True
     )
+st.markdown("</div>", unsafe_allow_html=True)
 
-# Sección de Profesora
+# Sección de Profesora justo debajo de los integrantes
 st.markdown(
     """
-    <div style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
-        <h3 style="color: #FFAD33; font-family: 'Roboto', sans-serif; font-size: 2em;">Profesora</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    """
-    <div style="text-align: center; margin: 5px 0;">
-        <p style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 1.2em;">Monica Otero Ferreiro</p>
+    <div style="margin-top: 10px; margin-left: 20px;">
+        <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
+        <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 12px;">Monica Otero Ferreiro</p>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# Sección de Carrera
+# Ingeniería Civil Informática alineada a la derecha
 st.markdown(
     """
-    <div style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
-        <h3 style="color: #FFAD33; font-family: 'Roboto', sans-serif; font-size: 2em;">Ing. Civil Informática</h3>
+    <div style="text-align: right; margin-top: 20px; margin-right: 20px;">
+        <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Ing. Civil Informática</h3>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# Derechos reservados
+# Derechos reservados al centro
 st.markdown(
     """
-    <div style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
-        <p style="color: #CCCCCC; font-family: 'Roboto', sans-serif; font-size: 0.9em;">USS - All rights reserved</p>
+    <div style="text-align: center; margin-top: 15px;">
+        <p style="color: #CCCCCC; font-family: 'Trebuchet MS', sans-serif; font-size: 12px;">USS - All rights reserved</p>
     </div>
     """,
     unsafe_allow_html=True
@@ -284,12 +274,13 @@ st.markdown(
 # Nota adicional
 st.markdown(
     """
-    <div style="text-align: center; margin-top: 20px;">
-        <p style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 1em;">League of Legends es un juego de Riot Games</p>
+    <div style="text-align: center; margin-top: 15px;">
+        <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 12px;">League of Legends es un juego de Riot Games</p>
     </div>
     """,
     unsafe_allow_html=True
 )
+
 st.image('imagenes/logo-original.png', use_column_width=True)
 
 
