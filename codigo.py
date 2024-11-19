@@ -7,6 +7,17 @@ import base64
 audio_file = open("League of Legends - Warriors.mp3", "rb")  # Abre el archivo de audio en modo binario
 st.audio(audio_file, format="audio/mp3", start_time=0)  # Reproduce el archivo de audio
 
+st.markdown(
+"""
+<audio autoplay controls>
+  <source src="League of Legends - Warriors.mp3" type="audio/mp3">
+  Tu navegador no soporta el formato de audio.
+</audio>
+"""
+, unsafe_allow_html=True
+)
+
+
 #base de datos pandas en informacion
 dfinf = pd.read_csv("backloggd_games.csv")
 def convertir_k(valor):
