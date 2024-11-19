@@ -294,7 +294,7 @@ elif opcion == 'Acerca de':
     </div>
     """, unsafe_allow_html=True)
 
-    st.image('imagenes/logouss.png', use_column_width=True)
+    st.image('imagenes/maxresdefault.jpg', use_column_width=True)
 
 
 
