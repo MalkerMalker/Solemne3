@@ -166,29 +166,38 @@ if opcion == 'Información':
     # Mostrar el gráfico en Streamlit
     st.altair_chart(chart, use_container_width=True)
     
-elif opcion == 'Campeones':
+#elif opcion == 'Campeones':
     col1, col2, col3, col4, col5, col6, col7, col8, col9, col10 = st.columns(10)
-    with col1:
+    #with col1:
         st.image("imagenes/eclipseinf.jpg")
-    with col2:
+    #with col2:
         st.image("imagenes/ludencompanioninf.jpg")
-    with col3:
+    #with col3:
         st.image("imagenes/eclipseinf.jpg")
-    with col4:
+    #with col4:
         st.image("imagenes/ludencompanioninf.jpg")
-    with col5:
+    #with col5:
         st.image("imagenes/eclipseinf.jpg")
-    with col6:
+    #with col6:
         st.image("imagenes/ludencompanioninf.jpg")
-    with col7:
+    #with col7:
         st.image("imagenes/eclipseinf.jpg")
-    with col8:
+    #with col8:
         st.image("imagenes/ludencompanioninf.jpg")
-    with col9:
+    #with col9:
         st.image("imagenes/eclipseinf.jpg")
-    with col10:
+    #with col10:
         st.image("imagenes/ludencompanioninf.jpg")
-                     
+
+imagenes = ["imagenes/eclipseinf.jpg", "imagenes/ludencompanioninf.jpg"] * 5  # Alterna las imágenes
+
+# Crear las columnas dinámicamente
+cols = st.columns(10)
+
+# Asignar las imágenes a cada columna
+for i, col in enumerate(cols):
+    col.image(imagenes[i])  # Asigna la imagen correspondiente a cada columna
+
 elif opcion == 'Competitivo':
     st.markdown("<h1 style='color: white;'>Competitivo</h1>", unsafe_allow_html=True)
     video_url = "https://www.youtube.com/watch?v=Kv2rswmxBVs"
