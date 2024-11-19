@@ -9,7 +9,7 @@ import streamlit as st
 # Usa Markdown para incrustar un reproductor de YouTube en modo oculto
 st.markdown("""
 <iframe width="0" height="0" 
-    src="https://www.youtube.com/embed/aR-KAldshAE?autoplay=1&loop=1&playlist=aR-KAldshAE" 
+    src="League of Legends - Warriors.mp3" 
     frameborder="0" 
     allow="autoplay" 
     style="display:none;">
