@@ -253,17 +253,7 @@ elif opcion == 'Acerca de':
         """,
         unsafe_allow_html=True
     )
-    
-    
-    st.markdown(
-        f"""
-        <div style="text-align: center;">
-            <img src="data:imagenes/pngegg.png;base64}" 
-                 style="width:500%; height:500px;">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+
 
 
 
