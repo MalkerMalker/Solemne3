@@ -204,7 +204,6 @@ elif opcion == 'Campeones':
     with col10:
         st.image("imagenes/ludencompanioninf.jpg")
 
-
 elif opcion == 'Competitivo':
 
 
