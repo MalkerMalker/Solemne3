@@ -220,7 +220,7 @@ elif opcion == 'Acerca de':
     )
 
     # Sección de Integrantes
-        st.markdown(
+    st.markdown(
         """
         <div style="margin: 0 20px; margin-bottom: 15px;">
             <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
