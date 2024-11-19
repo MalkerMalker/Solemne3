@@ -205,7 +205,7 @@ elif opcion == 'Campeones':
         st.image("imagenes/ludencompanioninf.jpg")
 
 elif opcion == 'Competitivo':
-
+    st.write("wena")
 
 elif opcion == 'Acerca de':
     # Encabezado principal
