@@ -248,7 +248,7 @@ elif opcion == 'Acerca de':
         """
         <div style="margin: 0 20px; text-align: right;">
             <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Carrera</h3>
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px;">Ingeniería Civil Informática</p>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 15px;">Ingeniería Civil Informática</p>
         </div>
         """,
         unsafe_allow_html=True
