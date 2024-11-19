@@ -249,7 +249,7 @@ elif opcion == 'Acerca de':
 
 
 
-st.image('imagenes/logo-original.png', use_column_width=True)
+    st.image('imagenes/logo-original.png', use_column_width=True)
 
 
 
