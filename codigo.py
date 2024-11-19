@@ -212,24 +212,24 @@ elif opcion == 'Competitivo':
     
 elif opcion == 'Acerca de':
 # Encabezado general con una fuente elegante y colores más estilizados
-st.markdown(
+    st.markdown(
     """
     <div style="text-align: center; margin-bottom: 20px;">
         <h1 style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 3em;">Acerca De</h1>
     </div>
     """,
     unsafe_allow_html=True
-)
+    )
 
 # Sección de Integrantes
-st.markdown(
+    st.markdown(
     """
     <div style="text-align: center; margin-bottom: 10px;">
         <h3 style="color: #FFAD33; font-family: 'Roboto', sans-serif; font-size: 2em;">Integrantes</h3>
     </div>
     """,
     unsafe_allow_html=True
-)
+    )
 
 # Lista de Integrantes
 integrantes = ["Diego Abarca", "Cristobal Camousseight", "Rodrigo Manríquez"]
