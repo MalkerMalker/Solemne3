@@ -211,88 +211,85 @@ elif opcion == 'Competitivo':
     st.video(video_url)
     
 elif opcion == 'Acerca de':
-         #TITULO
-    st.markdown(
+# Encabezado general con una fuente elegante y colores más estilizados
+st.markdown(
     """
-    <div style="text-align: center;">
-        <h1 style="color: white;">Acerca De</h1>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h1 style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 3em;">Acerca De</h1>
     </div>
     """,
     unsafe_allow_html=True
-    )
-    
-   #iNTEGRANTES
-    st.markdown(
+)
+
+# Sección de Integrantes
+st.markdown(
     """
-    <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">Integrantes</h3>
+    <div style="text-align: center; margin-bottom: 10px;">
+        <h3 style="color: #FFAD33; font-family: 'Roboto', sans-serif; font-size: 2em;">Integrantes</h3>
     </div>
     """,
     unsafe_allow_html=True
+)
+
+# Lista de Integrantes
+integrantes = ["Diego Abarca", "Cristobal Camousseight", "Rodrigo Manríquez"]
+for integrante in integrantes:
+    st.markdown(
+        f"""
+        <div style="text-align: center; margin: 5px 0;">
+            <p style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 1.2em;">{integrante}</p>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
-    #INTEGRANTES REAL
-    st.markdown("""
-    <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Diego Abarca</p>
+# Sección de Profesora
+st.markdown(
+    """
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
+        <h3 style="color: #FFAD33; font-family: 'Roboto', sans-serif; font-size: 2em;">Profesora</h3>
     </div>
-    """, unsafe_allow_html=True)
-    st.markdown("""
-    <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Cristobal Camousseight</p>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <div style="text-align: center; margin: 5px 0;">
+        <p style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 1.2em;">Monica Otero Ferreiro</p>
     </div>
-    """, unsafe_allow_html=True)
-    st.markdown("""
-    <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Rodrigo Manríquez</p>
-    </div>
-    """, unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
-    st.markdown(
+# Sección de Carrera
+st.markdown(
     """
-    <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">Profesora</h3>
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
+        <h3 style="color: #FFAD33; font-family: 'Roboto', sans-serif; font-size: 2em;">Ing. Civil Informática</h3>
     </div>
     """,
     unsafe_allow_html=True
-    )
-    st.markdown("""
-    <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>Monica Otero Ferreiro</p>
-    </div>
-    """, unsafe_allow_html=True)
+)
 
-    st.markdown(
+# Derechos reservados
+st.markdown(
     """
-    <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">Ing. Civil Informatica</h3>
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
+        <p style="color: #CCCCCC; font-family: 'Roboto', sans-serif; font-size: 0.9em;">USS - All rights reserved</p>
     </div>
     """,
     unsafe_allow_html=True
-    )
-    st.markdown(
+)
+
+# Nota adicional
+st.markdown(
     """
-    <div style="margin-left: -75px; margin-right: -75px;">
-        <h3 style="color: white;">USS All rights reserved</h3>
+    <div style="text-align: center; margin-top: 20px;">
+        <p style="color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 1em;">League of Legends es un juego de Riot Games</p>
     </div>
     """,
     unsafe_allow_html=True
-    )
-    st.markdown("""
-    <div style="margin-left: -75px;">
-    <div style="margin-right: -75px;">
-    <div style="text-align: justify; text-justify: inter-word;">
-        <p style='color: white;'>League of legends es un juego de riot games</p>
-    </div>
-    """, unsafe_allow_html=True)
+)
 
     st.image('imagenes/logo-original.png', use_column_width=True)
 
