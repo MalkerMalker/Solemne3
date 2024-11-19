@@ -217,8 +217,18 @@ elif opcion == 'Competitivo':
 )
 
 elif opcion == 'Acerca de':
-    # Sección de Integrantes
-    st.markdown(
+# Encabezado principal
+st.markdown(
+    """
+    <div style="text-align: center; margin-bottom: 15px;">
+        <h1 style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 2em;">Acerca De</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Sección de Integrantes
+st.markdown(
     """
     <div style="margin-bottom: 10px;">
         <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
@@ -241,12 +251,12 @@ for integrante in integrantes:
     )
 st.markdown("</div>", unsafe_allow_html=True)
 
-# Sección de Profesora justo debajo de los integrantes
+# Sección de Profesora pegada a la izquierda con mayor tamaño de fuente
 st.markdown(
     """
     <div style="margin-top: 10px; margin-left: 20px;">
         <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
-        <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 12px;">Monica Otero Ferreiro</p>
+        <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Monica Otero Ferreiro</p>
     </div>
     """,
     unsafe_allow_html=True
@@ -281,6 +291,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 st.image('imagenes/logo-original.png', use_column_width=True)
 
