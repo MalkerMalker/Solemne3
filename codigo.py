@@ -7,7 +7,7 @@ audio_file = open("League_of_Legends_Warriors.mp3", "rb")
 audio_html = 
 """
 <audio autoplay loop>
-    <source src=audio_file type="audio/mp3">
+    <source src="audio_file" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 """
