@@ -235,7 +235,7 @@ elif opcion == 'Acerca de':
 # Sección de Profesora
     st.markdown(
         """
-        <div style="margin: 0 20px; margin-bottom: 15px;">
+        <div style="margin: 0 20px; margin-bottom: 10px;">
             <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
             <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Monica Otero Ferreiro</p>
         </div>
@@ -258,6 +258,7 @@ elif opcion == 'Acerca de':
 
 
 
+    
     st.image('imagenes/logo-original.png', use_column_width=True)
 
 
