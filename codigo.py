@@ -196,7 +196,91 @@ elif opcion == 'Competitivo':
     st.video(video_url)
     
 elif opcion == 'Acerca de':
-    st.write('Aquí se mostraría la información adicional.')
+         #TITULO
+    st.markdown(
+    """
+    <div style="text-align: center;">
+        <h1 style="color: white;">Acerca De</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+    
+   #iNTEGRANTES
+    st.markdown(
+    """
+    <div style="margin-left: -75px; margin-right: -75px;">
+        <h3 style="color: white;">Integrantes</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+
+    #INTEGRANTES REAL
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>Diego Abarca</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>Cristobal Camousseight</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>Rodrigo Manríquez</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown(
+    """
+    <div style="margin-left: -75px; margin-right: -75px;">
+        <h3 style="color: white;">Profesora</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>Monica Otero Ferreiro</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown(
+    """
+    <div style="margin-left: -75px; margin-right: -75px;">
+        <h3 style="color: white;">Ing. Civil Informatica</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+    st.markdown(
+    """
+    <div style="margin-left: -75px; margin-right: -75px;">
+        <h3 style="color: white;">USS All rights reserved</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+    st.markdown("""
+    <div style="margin-left: -75px;">
+    <div style="margin-right: -75px;">
+    <div style="text-align: justify; text-justify: inter-word;">
+        <p style='color: white;'>League of legends es un juego de riot games</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.image('imagenes/logouss.png', use_column_width=True)
+
 
 
 
