@@ -205,7 +205,7 @@ elif opcion == 'Campeones':
         st.image("imagenes/ludencompanioninf.jpg")
 
 
- elif opcion == 'Competitivo':
+elif opcion == 'Competitivo':
 
 
  elif opcion == 'Acerca de':
