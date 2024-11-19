@@ -4,15 +4,13 @@ import pandas as pd
 import altair as alt
 import base64
 
-
-import streamlit as st
-
-# Inserta un reproductor de MP3 oculto que se reproduce automáticamente
 st.markdown("""
-<audio autoplay loop style="display:none;">
-    <source src="https://archive.org/details/ImagineDragonsWarriorsLyrics" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
+<iframe width="0" height="0" 
+    src="https://www.youtube.com/embed/aR-KAldshAE?autoplay=1&loop=1&playlist=aR-KAldshAE" 
+    frameborder="0" 
+    allow="autoplay" 
+    style="display:none;">
+</iframe>
 """, unsafe_allow_html=True)
 
 
