@@ -254,8 +254,15 @@ elif opcion == 'Acerca de':
         unsafe_allow_html=True
     )
     
-    st.image('imagenes/pngegg.png', use_column_width=True)
-
+    
+    st.markdown(
+        f"""
+        <div style="text-align: center;">
+            <img src="data:imagenes/pngegg.png;base64,{uploaded_image.getvalue().hex()}" 
+                 style="width:500%; height:500px;">
+        </div>
+        """,
+        unsafe_allow_html=True
 
 
 
