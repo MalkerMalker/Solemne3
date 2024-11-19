@@ -166,7 +166,7 @@ if opcion == 'Información':
     # Mostrar el gráfico en Streamlit
     st.altair_chart(chart, use_container_width=True)
     
-#elif opcion == 'Campeones':
+elif opcion == 'Campeones':
     col1, col2, col3, col4, col5, col6, col7, col8, col9, col10 = st.columns(10)
     #with col1:
         st.image("imagenes/eclipseinf.jpg")
