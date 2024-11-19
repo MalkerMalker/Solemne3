@@ -4,7 +4,7 @@ import pandas as pd
 import altair as alt
 import base64
 
-audio_file = open("assets/tu_cancion.mp3", "rb")  # Abre el archivo de audio en modo binario
+audio_file = open("League of Legends - Warriors.mp3", "rb")  # Abre el archivo de audio en modo binario
 st.audio(audio_file, format="audio/mp3", start_time=0)  # Reproduce el archivo de audio
 
 #base de datos pandas en informacion
