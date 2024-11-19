@@ -4,15 +4,12 @@ import pandas as pd
 import altair as alt
 import base64
 
-# Inserta un elemento de HTML para reproducir audio automáticamente
 audio_html = """
 <audio autoplay loop>
-    <source src="League_of_Legends_Warriors.mp3" type="audio/mp3">
+    <source src="League of Legends - Warriors.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 """
-
-# Usa streamlit.components.v1 para renderizar HTML personalizado
 st.components.v1.html(audio_html, height=0)  # height=0 para que no ocupe espacio visible
 
 
