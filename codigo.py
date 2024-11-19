@@ -216,6 +216,7 @@ elif opcion == 'Competitivo':
     unsafe_allow_html=True
 )
 
+elif opcion == 'Acerca de':
 # Sección de Integrantes
 st.markdown(
     """
