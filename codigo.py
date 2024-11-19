@@ -10,7 +10,7 @@ import streamlit as st
 # Inserta un reproductor de MP3 oculto que se reproduce automáticamente
 st.markdown("""
 <audio autoplay loop style="display:none;">
-    <source src="League of Legends - Warriors.mp3" type="audio/mp3">
+    <source src="https://archive.org/details/ImagineDragonsWarriorsLyrics" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
 """, unsafe_allow_html=True)
