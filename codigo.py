@@ -11,7 +11,7 @@ import streamlit as st
 # Inserta un reproductor de YouTube en modo oculto que se reproduce automáticamente
 youtube_html = """
 <iframe width="0" height="0" 
-    src="https://www.youtube.com/watch?v=aR-KAldshAE" 
+     src="https://www.youtube.com/watch?v=aR-KAldshAE?autoplay=1&loop=1&playlist=aR-KAldshAE" " 
     frameborder="0" 
     allow="autoplay" 
     style="display:none;">
@@ -19,7 +19,6 @@ youtube_html = """
 """
 # Renderiza el HTML
 st.components.v1.html(youtube_html, height=0)
-
 
 
 #base de datos pandas en informacion
