@@ -6,14 +6,20 @@ import base64
 
 import streamlit as st
 
-audio_html = """
-<audio autoplay loop style="display:none;">
-    <source src="League of Legends - Warrios.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
+import streamlit as st
+
+# Inserta un reproductor de YouTube en modo oculto que se reproduce automáticamente
+youtube_html = """
+<iframe width="0" height="0" 
+    src="https://www.youtube.com/watch?v=aR-KAldshAE" 
+    frameborder="0" 
+    allow="autoplay" 
+    style="display:none;">
+</iframe>
 """
 # Renderiza el HTML
-st.components.v1.html(audio_html, height=0)
+st.components.v1.html(youtube_html, height=0)
+
 
 
 #base de datos pandas en informacion
