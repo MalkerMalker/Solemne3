@@ -207,7 +207,9 @@ elif opcion == 'Campeones':
 
 elif opcion == 'Competitivo':
 
-# Encabezado principal
+
+elif opcion == 'Acerca de':
+    # Encabezado principal
     st.markdown(
     """
     <div style="text-align: center; margin-bottom: 15px;">
