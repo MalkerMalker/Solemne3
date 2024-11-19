@@ -206,6 +206,7 @@ elif opcion == 'Campeones':
 
 
 elif opcion == 'Competitivo':
+
 # Encabezado principal
     st.markdown(
     """
@@ -216,23 +217,12 @@ elif opcion == 'Competitivo':
     unsafe_allow_html=True
 )
 
-elif opcion == 'Acerca de':
-# Encabezado principal
-    st.markdown(
-    """
-    <div style="text-align: center; margin-bottom: 15px;">
-        <h1 style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 2em;">Acerca De</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-# Contenedor para los integrantes y la profesora
+# Contenedor general para integrantes, profesora y carrera
 st.markdown(
     """
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin: 0 20px;">
+    <div style="margin: 0 20px;">
         <!-- Sección de Integrantes -->
-        <div style="width: 45%;">
+        <div style="margin-bottom: 15px;">
             <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
             <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Diego Abarca</p>
             <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Cristobal Camousseight</p>
@@ -240,44 +230,21 @@ st.markdown(
         </div>
 
         <!-- Sección de Profesora -->
-        <div style="width: 45%; text-align: left;">
+        <div style="margin-bottom: 15px;">
             <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
             <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Monica Otero Ferreiro</p>
+        </div>
+
+        <!-- Sección de Carrera -->
+        <div style="text-align: right;">
+            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Carrera</h3>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Ingeniería Civil Informática</p>
         </div>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# Ingeniería Civil Informática alineada a la derecha
-st.markdown(
-    """
-    <div style="text-align: right; margin-top: 20px; margin-right: 20px;">
-        <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Ing. Civil Informática</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-# Derechos reservados al centro
-st.markdown(
-    """
-    <div style="text-align: center; margin-top: 15px;">
-        <p style="color: #CCCCCC; font-family: 'Trebuchet MS', sans-serif; font-size: 12px;">USS - All rights reserved</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-# Nota adicional
-st.markdown(
-    """
-    <div style="text-align: center; margin-top: 15px;">
-        <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 12px;">League of Legends es un juego de Riot Games</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
 
 
 
