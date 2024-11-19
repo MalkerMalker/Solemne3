@@ -4,7 +4,7 @@ import pandas as pd
 import altair as alt
 import base64
 
-audio_file = open("League_of_Legends_Warriors.mp3", "rb")
+audio_file = open("League of Legends - Warriors.mp3", "rb")
 st.audio(audio_file, format="audio/mp3")
 
 
