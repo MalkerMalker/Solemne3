@@ -217,8 +217,8 @@ elif opcion == 'Competitivo':
 )
 
 elif opcion == 'Acerca de':
-# Sección de Integrantes
-st.markdown(
+    # Sección de Integrantes
+    st.markdown(
     """
     <div style="margin-bottom: 10px;">
         <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
