@@ -254,7 +254,7 @@ elif opcion == 'Acerca de':
         unsafe_allow_html=True
     )
     
-    st.image('imagenes/logo-original.png', use_column_width=True)
+    st.image('imagenes/pngegg.png', use_column_width=True)
 
 
 
