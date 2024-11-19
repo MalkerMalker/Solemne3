@@ -4,19 +4,22 @@ import pandas as pd
 import altair as alt
 import base64
 
-audio_file = open("League of Legends - Warriors.mp3", "rb")  # Abre el archivo de audio en modo binario
-st.audio(audio_file, format="audio/mp3", start_time=0)  # Reproduce el archivo de audio
-
-st.markdown(
-    """
-    <audio autoplay controls>
-        <source src="League of Legends - Warriors.mp3" type="audio/mp3">
-        Tu navegador no soporta el formato de audio.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Music</title>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="League_of_Legends_Warriors.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
     </audio>
-    """,
-    unsafe_allow_html=True
-)
-
+    <h1>Welcome to the Page!</h1>
+    <p>The background music is playing automatically.</p>
+</body>
+</html>
 
 
 #base de datos pandas en informacion
