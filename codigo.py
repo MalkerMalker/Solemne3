@@ -15,7 +15,8 @@ youtube_html = """
 """
 
 # Renderiza el HTML
-st.components.v1.html(youtube_html, height)
+st.components.v1.html(youtube_html, height=0)
+
 
 
 
