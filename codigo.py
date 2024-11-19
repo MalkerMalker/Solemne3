@@ -5,7 +5,8 @@ import altair as alt
 import base64
 
 # Inserta un reproductor de YouTube en modo oculto que se reproduce automáticamente
-youtube_html = """
+youtube_html= 
+"""
 <iframe width="0" height="0" 
     src="https://www.youtube.com/embed/aR-KAldshAE?autoplay=1&loop=1&playlist=aR-KAldshAE" 
     frameborder="0" 
@@ -13,7 +14,6 @@ youtube_html = """
     style="display:none;">
 </iframe>
 """
-
 # Renderiza el HTML
 st.components.v1.html(youtube_html, height=0)
 
