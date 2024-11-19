@@ -219,32 +219,32 @@ elif opcion == 'Acerca de':
 )
 
 # Contenedor general para integrantes, profesora y carrera
-st.markdown(
-    """
-    <div style="margin: 0 20px;">
-        <!-- Sección de Integrantes -->
-        <div style="margin-bottom: 15px;">
-            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Diego Abarca</p>
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Cristobal Camousseight</p>
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Rodrigo Manríquez</p>
-        </div>
+    st.markdown(
+        """
+        <div style="margin: 0 20px;">
+            <!-- Sección de Integrantes -->
+            <div style="margin-bottom: 15px;">
+                <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
+                <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Diego Abarca</p>
+                <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Cristobal Camousseight</p>
+                <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Rodrigo Manríquez</p>
+            </div>
 
-        <!-- Sección de Profesora -->
-        <div style="margin-bottom: 15px;">
-            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Monica Otero Ferreiro</p>
-        </div>
+            <!-- Sección de Profesora -->
+            <div style="margin-bottom: 15px;">
+                <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
+                <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Monica Otero Ferreiro</p>
+            </div>
 
-        <!-- Sección de Carrera -->
-        <div style="text-align: right;">
-            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Carrera</h3>
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Ingeniería Civil Informática</p>
+            <!-- Sección de Carrera -->
+            <div style="text-align: right;">
+                <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Carrera</h3>
+                <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Ingeniería Civil Informática</p>
+            </div>
         </div>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+        """,
+        unsafe_allow_html=True
+    )
 
 
 
