@@ -217,8 +217,8 @@ elif opcion == 'Competitivo':
 )
 
 elif opcion == 'Acerca de':
-    # Encabezado principal
-    st.markdown(
+# Encabezado principal
+st.markdown(
     """
     <div style="text-align: center; margin-bottom: 15px;">
         <h1 style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 2em;">Acerca De</h1>
@@ -227,36 +227,23 @@ elif opcion == 'Acerca de':
     unsafe_allow_html=True
 )
 
-# Sección de Integrantes
+# Contenedor para los integrantes y la profesora
 st.markdown(
     """
-    <div style="margin-bottom: 10px;">
-        <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-# Lista de Integrantes alineada a la izquierda
-integrantes = ["Diego Abarca", "Cristobal Camousseight", "Rodrigo Manríquez"]
-st.markdown("<div style='margin-left: 20px;'>", unsafe_allow_html=True)  # Contenedor para alineación izquierda
-for integrante in integrantes:
-    st.markdown(
-        f"""
-        <div style="margin: 3px 0;">
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 12px;">{integrante}</p>
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin: 0 20px;">
+        <!-- Sección de Integrantes -->
+        <div style="width: 45%;">
+            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Integrantes</h3>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Diego Abarca</p>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Cristobal Camousseight</p>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px; margin: 5px 0;">Rodrigo Manríquez</p>
         </div>
-        """,
-        unsafe_allow_html=True
-    )
-st.markdown("</div>", unsafe_allow_html=True)
 
-# Sección de Profesora pegada a la izquierda con mayor tamaño de fuente
-st.markdown(
-    """
-    <div style='margin-left: 20px;'>", unsafe_allow_html=True>
-        <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
-        <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Monica Otero Ferreiro</p>
+        <!-- Sección de Profesora -->
+        <div style="width: 45%; text-align: left;">
+            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 16px;">Monica Otero Ferreiro</p>
+        </div>
     </div>
     """,
     unsafe_allow_html=True
@@ -291,6 +278,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 
 st.image('imagenes/logo-original.png', use_column_width=True)
