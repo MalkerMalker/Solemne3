@@ -4,22 +4,16 @@ import pandas as pd
 import altair as alt
 import base64
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Music</title>
-</head>
-<body>
-    <audio autoplay loop>
-        <source src="League_of_Legends_Warriors.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    <h1>Welcome to the Page!</h1>
-    <p>The background music is playing automatically.</p>
-</body>
-</html>
+# Inserta un elemento de HTML para reproducir audio automáticamente
+audio_html = """
+<audio autoplay loop>
+    <source src="League_of_Legends_Warriors.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+"""
+
+# Usa streamlit.components.v1 para renderizar HTML personalizado
+st.components.v1.html(audio_html, height=0)  # height=0 para que no ocupe espacio visible
 
 
 #base de datos pandas en informacion
