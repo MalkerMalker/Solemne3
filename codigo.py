@@ -207,7 +207,7 @@ elif opcion == 'Campeones':
 
 elif opcion == 'Competitivo':
 # Encabezado principal
-st.markdown(
+    st.markdown(
     """
     <div style="text-align: center; margin-bottom: 15px;">
         <h1 style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 2em;">Acerca De</h1>
