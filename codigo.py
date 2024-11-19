@@ -258,7 +258,7 @@ elif opcion == 'Acerca de':
     st.markdown(
         f"""
         <div style="text-align: center;">
-            <img src="data:imagenes/pngegg.png;base64,{uploaded_image.getvalue().hex()}" 
+            <img src="data:imagenes/pngegg.png;base64}" 
                  style="width:500%; height:500px;">
         </div>
         """,
