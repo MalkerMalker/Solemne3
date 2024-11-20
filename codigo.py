@@ -358,11 +358,8 @@ elif opcion == 'Campeones':
         unsafe_allow_html=True
         )
 
-                
-
-
 elif opcion == 'Competitivo':
-    st.write("wena")
+    st.write("wenaboki")
 
 elif opcion == 'Acerca de':
 
