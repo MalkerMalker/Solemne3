@@ -365,9 +365,9 @@ elif opcion == 'Campeones':
         )
         col1, col2 = st.columns(2)
         with col1:
-            st.image(rutasplash, caption="SplashArt del campeón")
+            st.image(rutasplash[0], caption="SplashArt del campeón")
         with col2:
-            st.image(rutaimagen, caption="Icono del campeón")
+            st.image(rutaimagen[0], caption="Icono del campeón")
 
 elif opcion == 'Competitivo':
     st.write("wenaboki")
