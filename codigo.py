@@ -214,7 +214,7 @@ elif opcion == 'Campeones':
                            ("imagenes/iconos/draven.jpg", "Draven"),
                            ("imagenes/iconos/drmundo.jpg", "Dr. Mundo"),
                            ("imagenes/iconos/ekko.jpg", "Ekko"),
-                           ("imagenes/iconos/elisse.jpg", "Elisse"),
+                           ("imagenes/iconos/elisse.jpg", "Elise"),
                            ("imagenes/iconos/evelynn.jpg", "Evelynn"),
                            ("imagenes/iconos/ezreal.jpg", "Ezreal"),
                            ("imagenes/iconos/fiddlesticks.jpg", "Fiddlesticks"),
