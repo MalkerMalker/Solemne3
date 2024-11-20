@@ -371,7 +371,7 @@ elif opcion == 'Campeones':
         with col1:
             st.image(splash, caption="SplashArt del campeón")
         with col2:
-            st.image(imagen, caption="Icono del campeón",width=60)
+            st.image(imagen, caption="Icono del campeón")
     else:
         st.write("Selecciona un campeon")
 elif opcion == 'Competitivo':
