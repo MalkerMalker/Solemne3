@@ -184,11 +184,7 @@ if opcion == 'Información':
     
 elif opcion == 'Campeones':
     st.sidebar.title("Lista de campeones")
-    
-    # Variable para guardar el mensaje seleccionado
     mensaje = "Selecciona un campeón"
-    
-    # Configuración de los botones en el sidebar
     with st.sidebar:    
         for img, title in [("imagenes/iconos/aatrox.jpg", "Aatrox"),
                            ("imagenes/iconos/ahri.jpg", "Ahri"),
@@ -346,13 +342,12 @@ elif opcion == 'Campeones':
                            ("imagenes/iconos/zilean.jpg", "Zilean"),
                            ("imagenes/iconos/zoe.jpg", "Zoe"),
                            ("imagenes/iconos/zyra.jpg", "Zyra")]:
-            col1, col2 = st.columns([1, 1])  # Proporciones iguales para columnas
+            col1, col2 = st.columns([1, 1]) 
             with col1:
-                st.image(img, width=60)  # Ajusta el tamaño de la imagen
+                st.image(img, width=60) 
             with col2:
-                if st.button(title):  # Al presionar un botón, se actualiza el mensaje
+                if st.button(title): 
                     mensaje = title
-    # Mostrar el mensaje en la página principal
     if title :
         
         fila = dfchamp[dfchamp["Name"] == mensaje]
@@ -407,9 +402,9 @@ elif opcion == 'Campeones':
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
         
 
-        col1, col2 = st.columns([1, 9])  # La primera columna tiene un peso 1, la segunda peso 3
+        col1, col2 = st.columns([1, 9]) 
         with col1:
-            st.image(rutaimagen[0], width=60)  # Imagen en la columna más pequeña
+            st.image(rutaimagen[0], width=60)
         with col2:
             st.markdown(
             f"""
@@ -422,7 +417,7 @@ elif opcion == 'Campeones':
             
         st.image(rutasplash[0],caption="SplashArt del campeón")
         
-        col1, col2 = st.columns([1, 1])  # División principal en dos columnas iguales
+        col1, col2 = st.columns([1, 1]) 
         with col1:
             st.markdown(
                 """
@@ -443,20 +438,19 @@ elif opcion == 'Campeones':
                 """,
                 unsafe_allow_html=True
             )
-        
-            # Subcolumnas para organizar los íconos y texto en una fila
-            icon_col1, text_col1 = st.columns([1, 3])  # Ajusta la proporción para que el texto tenga más espacio
+
+            icon_col1, text_col1 = st.columns([1, 3]) 
             with icon_col1:
-                st.image(tagimagen, width=40)  # Primer ícono
+                st.image(tagimagen, width=40)  
             with text_col1:
-                st.write(tagtexto)  # Texto a la derecha del ícono
+                st.write(tagtexto)  
         
-            if tagimagen2:  # Si hay un segundo ícono
-                icon_col2, text_col2 = st.columns([1, 3])  # Reutiliza las proporciones
+            if tagimagen2: 
+                icon_col2, text_col2 = st.columns([1, 3])
                 with icon_col2:
-                    st.image(tagimagen2, width=40)  # Segundo ícono
+                    st.image(tagimagen2, width=40)
                 with text_col2:
-                    st.write(tagtexto2)  # Texto a la derecha del segundo ícono
+                    st.write(tagtexto2) 
     else:
         st.write("Selecciona un campeon")
 
