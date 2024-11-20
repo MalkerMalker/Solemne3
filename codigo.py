@@ -357,16 +357,22 @@ elif opcion == 'Campeones':
         imagen = rutaimagen[0]
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
         splash = rutasplash[0]
-        st.markdown(
-        f"""
-        <div style="text-align: center;">
-            <h1 style="color: white;">{mensaje}</h1>
-        </div>
-        """,
-        unsafe_allow_html=True
-        )
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image(imagen,width=60)
+        with col2:
+            st.markdown(
+            f"""
+            <div style="text-align: center;">
+                <h1 style="color: white;">{mensaje}</h1>
+            </div>
+            """,
+            unsafe_allow_html=True
+            )
+        
         st.image(splash, caption="SplashArt del campeón")
-        st.image(imagen, caption="Icono del campeón",width=60)
+        
         
         
     else:
