@@ -364,13 +364,13 @@ elif opcion == 'Campeones':
         with col2:
             st.markdown(
             f"""
-            <div style="display: flex; align-items: center; text-align: left; height: 100%;">
+            <div style="text-align: left;">
                 <h1 style="color: white; margin: 0;">{mensaje}</h1>
             </div>
             """,
             unsafe_allow_html=True
             )
-                
+            
         st.image(splash,caption="SplashArt del campeón")
         
     else:
