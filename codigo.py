@@ -440,10 +440,10 @@ elif opcion == 'Campeones':
             unsafe_allow_html=True)
             col1, col2 = st.columns([1, 9])
             with col1:
-                col1, col2 = st.columns([1, 1])
-                with col1:
+                col12, col22 = st.columns([1, 1])
+                with col12:
                     st.image(tagimagen)
-                with col2:
+                with col22:
                     st.image(tagimagen2)
             with col2:
                 st.write(tagtexto,tagtexto2)
