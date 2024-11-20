@@ -479,7 +479,10 @@ elif opcion == 'Campeones':
                 unsafe_allow_html=True
             )
 
-            icon_col1, texto, icon_col2, texto2 = st.columns([1,3,1,3]) 
+            desc, icon_col1, texto, icon_col2, texto2 = st.columns([3,1,3,1,3])
+            with icon_col1:
+                st.write("Rol:")
+                st.write("Pocisión:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
