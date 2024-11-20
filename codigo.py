@@ -351,7 +351,7 @@ elif opcion == 'Campeones':
                     mensaje = title
         
     # Mostrar el mensaje en la página principal
-    if title:
+    if title > 0:
         rutasplash = ["imagenes/iconos/aatrox.jpg"]
         rutaimagen = ["imagenes/splash/aatroxf.jpg"]
         fila = dfchamp[dfchamp["Name"] == mensaje]
