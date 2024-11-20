@@ -378,6 +378,9 @@ elif opcion == 'Campeones':
         elif tag1 == "Support":
             tagimagen = "imagenes/assets/support.png"
             tagtexto = "Soporte"
+        elif tag1 == "Marksman":
+            tagimagen = "imagenes/assets/adcarry.png"
+            tagtexto = "Tirador"
         if tag2 == "Fighter":
             tagimagen2 = "imagenes/assets/peleador.png"
             tagtexto2 = "Peleador"
