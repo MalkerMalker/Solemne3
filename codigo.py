@@ -358,7 +358,7 @@ elif opcion == 'Campeones':
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
         splash = rutasplash[0]
 
-        col1, col2 = st.columns([1, 3])  # La primera columna tiene un peso 1, la segunda peso 3
+        col1, col2 = st.columns([1, 9])  # La primera columna tiene un peso 1, la segunda peso 3
         with col1:
             st.image(imagen, width=60)  # Imagen en la columna más pequeña
         with col2:
