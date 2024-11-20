@@ -351,9 +351,8 @@ elif opcion == 'Campeones':
                     mensaje = title
         
     # Mostrar el mensaje en la página principal
-    if title > 0:
-        rutasplash = ["imagenes/iconos/aatrox.jpg"]
-        rutaimagen = ["imagenes/splash/aatroxf.jpg"]
+    if title :
+
         fila = dfchamp[dfchamp["Name"] == mensaje]
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
