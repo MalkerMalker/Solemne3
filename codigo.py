@@ -363,12 +363,12 @@ elif opcion == 'Campeones':
             st.image(imagen, width=60)  # Imagen en la columna más pequeña
         with col2:
             st.markdown(
-                f"""
-                <div style="text-align: left;">
-                    <h1 style="color: white;">{mensaje}</h1>
-                </div>
-                """,
-                unsafe_allow_html=True
+            f"""
+            <div style="display: flex; align-items: center; text-align: left; height: 100%;">
+                <h1 style="color: white; margin: 0;">{mensaje}</h1>
+            </div>
+            """,
+            unsafe_allow_html=True
             )
                 
         st.image(splash,caption="SplashArt del campeón")
