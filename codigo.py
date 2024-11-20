@@ -349,10 +349,11 @@ elif opcion == 'Campeones':
             with col2:
                 if st.button(title):  # Al presionar un botón, se actualiza el mensaje
                     mensaje = title
-        
+        imagen="imagenes/iconos/aatrox.jpg"
+        splash="imagenes/splash/aatroxf.jpg"
     # Mostrar el mensaje en la página principal
     if title :
-
+        
         fila = dfchamp[dfchamp["Name"] == mensaje]
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         imagen = rutaimagen[0]
