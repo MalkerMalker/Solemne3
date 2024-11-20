@@ -356,8 +356,53 @@ elif opcion == 'Campeones':
     if title :
         
         fila = dfchamp[dfchamp["Name"] == mensaje]
+        informacion = dfchamp.loc[dfchamp["Name"] == mensaje, "Informacion"].values[0]
+        
+        tags = dfchamp.loc[dfchamp["Name"] == mensaje, "Tags"].values[0]
+        tags_split = tags.split(",") 
+        tag1 = tags_split[0] if len(tags_split) > 0 else None
+        tag2 = tags_split[1] if len(tags_split) > 1 else None
+        tagtexto2 = ""
+        if tag1 == "Fighter":
+            tagimagen = "imagenes/assets/peleador.png"
+            tagtexto = "Peleador"
+        elif tag1 == "Assassin":
+            tagimagen = "imagenes/assets/asesino.png"
+            tagtexto = "Asesino"
+        elif tag1 == "Mage":
+            tagimagen = "imagenes/assets/mago.png"
+            tagtexto = "Mago"
+        elif tag1 == "Tank":
+            tagimagen = "imagenes/assets/tanque.png"
+            tagtexto = "Tanque"
+        elif tag1 == "Support":
+            tagimagen = "imagenes/assets/support.png"
+            tagtexto = "Soporte"
+        if tag2 == "Fighter":
+            tagimagen2 = "imagenes/assets/peleador.png"
+            tagtexto2 = "Peleador"
+        elif tag2 == "Assassin":
+            tagimagen2 = "imagenes/assets/asesino.png"
+            tagtexto2 = "Asesino"
+        elif tag2 == "Mage":
+            tagimagen2 = "imagenes/assets/mago.png"
+            tagtexto2 = "Mago"
+        elif tag2 == "Tank":
+            tagimagen2 = "imagenes/assets/tanque.png"
+            tagtexto2 = "Tanque"
+        elif tag2 == "Support":
+            tagimagen2 = "imagenes/assets/support.png"
+            tagtexto2 = "Soporte"
+        elif tag2 == "Support":
+            tagimagen2 = "imagenes/assets/support.png"
+            tagtexto2 = "Soporte"
+        elif tag2 == "":
+            tagimagen2 = "imagenes/assets/invisible.png"
+            tagtexto2 = ""
+        
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
+        
 
         col1, col2 = st.columns([1, 9])  # La primera columna tiene un peso 1, la segunda peso 3
         with col1:
@@ -374,8 +419,38 @@ elif opcion == 'Campeones':
             
         st.image(rutasplash[0],caption="SplashArt del campeón")
         
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            st.markdown(
+            """
+            <div style="margin-left: -75px; margin-right: -75px;">
+               <h3 style="color: white;">Historia</h3>
+            </div>
+            """,
+            unsafe_allow_html=True
+            )
+            st.write(informacion)
+        with col2:
+            st.markdown(
+            """
+            <div style="margin-left: -75px; margin-right: -75px;">
+                <h3 style="color: white;">Información</h3>
+            </div>
+            """,
+            unsafe_allow_html=True)
+            col1, col2 = st.columns([1, 9])
+            with col1:
+                col1, col2 = st.columns([1, 1])
+                with col1:
+                    st.image(tagimagen)
+                with col2:
+                    st.image(tagimagen2)
+            with col2:
+                st.write(tagtexto,tagtexto2)
     else:
         st.write("Selecciona un campeon")
+
+
 elif opcion == 'Competitivo':
     st.write("wenaboki")
 
