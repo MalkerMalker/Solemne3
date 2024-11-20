@@ -371,7 +371,7 @@ elif opcion == 'Campeones':
                 unsafe_allow_html=True
             )
                 
-        
+        st.image(splash,caption="SplashArt del campeón")
         
     else:
         st.write("Selecciona un campeon")
