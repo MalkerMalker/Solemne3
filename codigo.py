@@ -426,7 +426,7 @@ elif opcion == 'Campeones':
         with col1:
             st.markdown(
                 """
-                <div style="margin-left: 0px; margin-right: 0px;">
+                <div style="margin-left: -75px; margin-right: -75px;">
                    <h3 style="color: white;">Historia</h3>
                 </div>
                 """,
@@ -437,25 +437,26 @@ elif opcion == 'Campeones':
         with col2:
             st.markdown(
                 """
-                <div style="margin-left: 0px; margin-right: 0px;">
+                <div style="margin-left: -75px; margin-right: -75px;">
                     <h3 style="color: white;">Información</h3>
                 </div>
                 """,
                 unsafe_allow_html=True
             )
             
-            # Nueva estructura para imágenes y texto dentro de la segunda columna
-            subcol1, subcol2 = st.columns([1, 3])  # Subcolumnas para las imágenes y el texto
-            with subcol1:
-                if tagimagen:
-                    st.image(tagimagen, width=50)
+            # Concatenar textos con coma
+            tags_concatenados = ", ".join([tagtexto, tagtexto2] if tagtexto2 else [tagtexto])
+        
+            # Subcolumnas para organizar los íconos horizontalmente
+            icon_col1, icon_col2 = st.columns([1, 1])
+            with icon_col1:
+                st.image(tagimagen, width=50)  # Primer ícono
+            with icon_col2:
                 if tagimagen2:
-                    st.image(tagimagen2, width=50)
-            with subcol2:
-                st.write(tagtexto)
-                if tagtexto2:
-                    st.write(tagtexto2)
-
+                    st.image(tagimagen2, width=50)  # Segundo ícono
+        
+            # Mostrar los textos concatenados
+            st.write(tags_concatenados)
     else:
         st.write("Selecciona un campeon")
 
