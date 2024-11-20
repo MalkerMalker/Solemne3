@@ -13,6 +13,9 @@ st.markdown("""
 </iframe>
 """, unsafe_allow_html=True)
 
+#base de datos campeones
+dfchamp = pd.read_csv("LoL_champions.csv")
+
 
 #base de datos pandas en informacion
 dfinf = pd.read_csv("backloggd_games.csv")
