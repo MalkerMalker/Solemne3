@@ -360,6 +360,11 @@ elif opcion == 'Campeones':
         """,
         unsafe_allow_html=True
         )
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image("imagenes/nexoazul.jpg", caption="Los súbditos se generan en tu nexo. Detrás del nexo se encuentra la fuente, donde podrás recuperar vida y maná con rapidez y acceder a la tienda.")
+        with col2:
+            st.image("imagenes/nexorojo.jpg", caption="El nexo enemigo, que se encuentra en la base del equipo contrario, es igual que el de tu equipo. Si acabas con él, ganarás la partida.")
 
 elif opcion == 'Competitivo':
     st.write("wenaboki")
