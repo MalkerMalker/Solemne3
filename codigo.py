@@ -441,9 +441,9 @@ elif opcion == 'Campeones':
 
             icon_col1, icon_col2, texto = st.columns([1,1,3]) 
             with icon_col1:
-                st.image(tagimagen, width=40)
+                st.image(tagimagen, width=30)
             with icon_col2:
-                st.image(tagimagen2, width=40)
+                st.image(tagimagen2, width=30)
             with texto:
                 st.write(tagtexto,", ",tagtexto2)  
         
