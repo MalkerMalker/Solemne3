@@ -442,9 +442,9 @@ elif opcion == 'Campeones':
                        <h3 style="color: white;">Historia</h3>
                     </div>
                     """,
-                    unsafe_allow_html=True
-                )
-                st.write(informacion)
+                        unsafe_allow_html=True
+                    )
+                    st.write(informacion)
             
             with col2:
                 st.markdown(
@@ -454,7 +454,7 @@ elif opcion == 'Campeones':
                     </div>
                     """,
                     unsafe_allow_html=True
-                )
+                    )
             
                 # Subcolumnas para organizar los íconos y texto en una fila
                 icon_col1, text_col1 = st.columns([1, 3])  # Ajusta la proporción para que el texto tenga más espacio
