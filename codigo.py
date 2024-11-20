@@ -434,29 +434,42 @@ elif opcion == 'Campeones':
             )
             st.write(informacion)
         
-        with col2:
-            st.markdown(
-                """
-                <div style="margin-left: -75px; margin-right: -75px;">
-                    <h3 style="color: white;">Información</h3>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
+            col1, col2 = st.columns([1, 1])  # División principal en dos columnas iguales
+            with col1:
+                st.markdown(
+                    """
+                    <div style="margin-left: -75px; margin-right: -75px;">
+                       <h3 style="color: white;">Historia</h3>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+                st.write(informacion)
             
-            # Concatenar textos con coma
-            tags_concatenados = ", ".join([tagtexto, tagtexto2] if tagtexto2 else [tagtexto])
-        
-            # Subcolumnas para organizar los íconos horizontalmente
-            icon_col1, icon_col2 = st.columns([1, 1])
-            with icon_col1:
-                st.image(tagimagen, width=50)  # Primer ícono
-            with icon_col2:
-                if tagimagen2:
-                    st.image(tagimagen2, width=50)  # Segundo ícono
-        
-            # Mostrar los textos concatenados
-            st.write(tags_concatenados)
+            with col2:
+                st.markdown(
+                    """
+                    <div style="margin-left: -75px; margin-right: -75px;">
+                        <h3 style="color: white;">Información</h3>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            
+                # Subcolumnas para organizar los íconos y texto en una fila
+                icon_col1, text_col1 = st.columns([1, 3])  # Ajusta la proporción para que el texto tenga más espacio
+                with icon_col1:
+                    st.image(tagimagen, width=40)  # Primer ícono
+                with text_col1:
+                    st.write(tagtexto)  # Texto a la derecha del ícono
+            
+                if tagimagen2:  # Si hay un segundo ícono
+                    icon_col2, text_col2 = st.columns([1, 3])  # Reutiliza las proporciones
+                    with icon_col2:
+                        st.image(tagimagen2, width=40)  # Segundo ícono
+                    with text_col2:
+                        st.write(tagtexto2)  # Texto a la derecha del segundo ícono
+
     else:
         st.write("Selecciona un campeon")
 
