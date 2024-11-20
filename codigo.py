@@ -419,34 +419,40 @@ elif opcion == 'Campeones':
             
         st.image(rutasplash[0],caption="SplashArt del campeón")
         
-        col1, col2 = st.columns([1, 1])
+        col1, col2 = st.columns([1, 1])  # División principal en dos columnas iguales
         with col1:
             st.markdown(
-            """
-            <div style="margin-left: -75px; margin-right: -75px;">
-               <h3 style="color: white;">Historia</h3>
-            </div>
-            """,
-            unsafe_allow_html=True
+                """
+                <div style="margin-left: -75px; margin-right: -75px;">
+                   <h3 style="color: white;">Historia</h3>
+                </div>
+                """,
+                unsafe_allow_html=True
             )
             st.write(informacion)
+        
         with col2:
             st.markdown(
-            """
-            <div style="margin-left: -75px; margin-right: -75px;">
-                <h3 style="color: white;">Información</h3>
-            </div>
-            """,
-            unsafe_allow_html=True)
-            col1, col2 = st.columns([1, 9])
-            with col1:
-                col12, col22 = st.columns([1, 1])
-                with col12:
-                    st.image(tagimagen)
-                with col22:
-                    st.image(tagimagen2)
-            with col2:
-                st.write(tagtexto,tagtexto2)
+                """
+                <div style="margin-left: -75px; margin-right: -75px;">
+                    <h3 style="color: white;">Información</h3>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            
+            # Nueva estructura para imágenes y texto dentro de la segunda columna
+            subcol1, subcol2 = st.columns([1, 3])  # Subcolumnas para las imágenes y el texto
+            with subcol1:
+                if tagimagen:
+                    st.image(tagimagen, width=50, caption="Tag 1")
+                if tagimagen2:
+                    st.image(tagimagen2, width=50, caption="Tag 2")
+            with subcol2:
+                st.write(tagtexto)
+                if tagtexto2:
+                    st.write(tagtexto2)
+
     else:
         st.write("Selecciona un campeon")
 
