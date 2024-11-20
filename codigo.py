@@ -437,6 +437,15 @@ elif opcion == 'Campeones':
         elif tag2 == None:
             tagimagen2 = "imagenes/assets/invisible.png"
             tagtexto2 = ""
+
+        
+        range = dfchamp.loc[dfchamp["Name"] == mensaje, "Range type"].values[0]
+        if range == "Melee":
+            rangeimagen = "imagenes/assets/melee.png"
+            rangetexto = "Cuerpo a cuerpo"
+        elif range == "Ranged":
+            rangeimagen = "imagenes/assets/rango.png"
+            rangetexto = "Distancia"
         
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
@@ -483,12 +492,17 @@ elif opcion == 'Campeones':
             with desc:
                 st.write("Rol:")
                 st.write("Pocisión:")
+                st.write("Rango:")
+                st.write("Recurso:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
+                st.image(rangeimagen, width=30)
+                st.image(resourcetype, width=30)
             with texto:
                 st.write(tagtexto)
                 st.write(roltexto)
+                st.write(rangetexto)
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
