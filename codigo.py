@@ -349,7 +349,7 @@ elif opcion == 'Campeones':
             with col2:
                 if st.button(title):  # Al presionar un botón, se actualiza el mensaje
                     mensaje = title
-    
+        
     # Mostrar el mensaje en la página principal
     if title:
         fila = dfchamp[dfchamp["Name"] == mensaje]
@@ -368,7 +368,8 @@ elif opcion == 'Campeones':
             st.image(rutasplash[0], caption="SplashArt del campeón")
         with col2:
             st.image(rutaimagen[0], caption="Icono del campeón")
-
+    else:
+        st.write("Selecciona un campeon")
 elif opcion == 'Competitivo':
     st.write("wenaboki")
 
