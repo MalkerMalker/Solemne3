@@ -439,13 +439,15 @@ elif opcion == 'Campeones':
                 unsafe_allow_html=True
             )
 
-            icon_col1, icon_col2, texto = st.columns([1,1,3]) 
+            icon_col1, texto, icon_col2, texto2 = st.columns([1,3,1,3]) 
             with icon_col1:
                 st.image(tagimagen, width=30)
+            with texto:
+                st.write(tagtexto)  
             with icon_col2:
                 st.image(tagimagen2, width=30)
-            with texto:
-                st.write(tagtexto,", ",tagtexto2)  
+            with texto2:
+                st.write(tagtexto2)  
         
     else:
         st.write("Selecciona un campeon")
