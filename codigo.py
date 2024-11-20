@@ -479,7 +479,7 @@ elif opcion == 'Campeones':
                 unsafe_allow_html=True
             )
 
-            desc, icon_col1, texto, icon_col2, texto2 = st.columns([3,1,3,1,3])
+            desc, icon_col1, texto, icon_col2, texto2 = st.columns([2,1,3,1,3])
             with desc:
                 st.write("Rol:")
                 st.write("Pocisión:")
