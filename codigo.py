@@ -444,7 +444,7 @@ elif opcion == 'Campeones':
                     """,
                         unsafe_allow_html=True
                     )
-                    st.write(informacion)
+                st.write(informacion)
             
             with col2:
                 st.markdown(
