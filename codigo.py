@@ -352,7 +352,47 @@ elif opcion == 'Campeones':
         
         fila = dfchamp[dfchamp["Name"] == mensaje]
         informacion = dfchamp.loc[dfchamp["Name"] == mensaje, "Informacion"].values[0]
-        
+
+        role = dfchamp.loc[dfchamp["Name"] == mensaje, "Role"].values[0]
+        roles_split = tags.split(",") 
+        role1 = roles_split[0] if len(tags_split) > 0 else None
+        role2 = roles_split[1] if len(tags_split) > 1 else None
+        roltexto2 = ""
+        if role1 == "Top":
+            rolimagen = "imagenes/assets/top.png"
+            roltexto = "Carril superior"
+        elif role1 == "Middle":
+            rolimagen = "imagenes/assets/mid.png"
+            roltexto = "Carril del medio"
+        elif role1 == "Bottom":
+            rolimagen = "imagenes/assets/botlane.png"
+            roltexto = "Carril inferior"
+        elif role1 == "Support":
+            rolimagen = "imagenes/assets/supp.png"
+            roltexto = "Soporte"
+        elif role1 == "Jungle":
+            rolimagen = "imagenes/assets/jungla.png"
+            roltexto = "Jungla"
+            
+        if role2 == "Top":
+            rolimagen2 = "imagenes/assets/top.png"
+            roltexto2 = "Carril superior"
+        elif role2 == "Middle":
+            rolimagen2 = "imagenes/assets/mid.png"
+            roltexto2 = "Carril del medio"
+        elif role2 == "Bottom":
+            rolimagen2 = "imagenes/assets/botlane.png"
+            roltexto2 = "Carril inferior"
+        elif role2 == "Support":
+            rolimagen2 = "imagenes/assets/supp.png"
+            roltexto2 = "Soporte"
+        elif role2 == "Jungle":
+            rolimagen2 = "imagenes/assets/jungla.png"
+            roltexto2 = "Jungla"
+        elif role2 == None:
+            rolimagen2 = "imagenes/assets/invisible.png"
+            roltexto2 = ""
+            
         tags = dfchamp.loc[dfchamp["Name"] == mensaje, "Tags"].values[0]
         tags_split = tags.split(",") 
         tag1 = tags_split[0] if len(tags_split) > 0 else None
@@ -442,12 +482,16 @@ elif opcion == 'Campeones':
             icon_col1, texto, icon_col2, texto2 = st.columns([1,3,1,3]) 
             with icon_col1:
                 st.image(tagimagen, width=30)
+                st.image(rolimagen, width=30)
             with texto:
-                st.write(tagtexto)  
+                st.write(tagtexto)
+                st.write(roltexto)
             with icon_col2:
                 st.image(tagimagen2, width=30)
+                st.image(rolimagen2, width=30)
             with texto2:
                 st.write(tagtexto2)  
+                st.write(roltexto2)  
         
     else:
         st.write("Selecciona un campeon")
