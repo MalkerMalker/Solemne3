@@ -355,7 +355,9 @@ elif opcion == 'Campeones':
 
         fila = dfchamp[dfchamp["Name"] == mensaje]
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
+        imagen = rutaimagen[0]
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
+        splash = rutasplash[0]
         st.markdown(
         f"""
         <div style="text-align: center;">
@@ -366,9 +368,9 @@ elif opcion == 'Campeones':
         )
         col1, col2 = st.columns(2)
         with col1:
-            st.image(rutasplash[0], caption="SplashArt del campeón")
+            st.image(imagen, caption="SplashArt del campeón")
         with col2:
-            st.image(rutaimagen[0], caption="Icono del campeón")
+            st.image(splash, caption="Icono del campeón")
     else:
         st.write("Selecciona un campeon")
 elif opcion == 'Competitivo':
