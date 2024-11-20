@@ -349,8 +349,6 @@ elif opcion == 'Campeones':
             with col2:
                 if st.button(title):  # Al presionar un botón, se actualiza el mensaje
                     mensaje = title
-        imagen="imagenes/iconos/aatrox.jpg"
-        splash="imagenes/splash/aatroxf.jpg"
     # Mostrar el mensaje en la página principal
     if title :
         
@@ -367,8 +365,9 @@ elif opcion == 'Campeones':
         """,
         unsafe_allow_html=True
         )
-        st.image(imagen, caption="Icono del campeón",width=60)
         st.image(splash, caption="SplashArt del campeón")
+        st.image(imagen, caption="Icono del campeón",width=60)
+        
         
     else:
         st.write("Selecciona un campeon")
