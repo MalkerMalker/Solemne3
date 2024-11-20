@@ -53,7 +53,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 with st.sidebar:
     container = st.container()
     with container:
-        st.image("logo.png", width=100)
+        st.image("logo.png", width=200)
 st.image('imagenes/letras.png', use_column_width=True)
 
 opcion = st.sidebar.selectbox('Selecciona una sección', ['Información', 'Campeones', 'Competitivo', 'Acerca de'])
