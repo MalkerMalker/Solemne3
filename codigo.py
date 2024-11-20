@@ -183,7 +183,7 @@ elif opcion == 'Campeones':
     st.sidebar.title("Lista de campeones")
     
     # Variable para guardar el mensaje seleccionado
-    mensaje = ""
+    mensaje = "Selecciona un campeón"
     
     # Configuración de los botones en el sidebar
     with st.sidebar:    
