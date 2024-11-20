@@ -461,7 +461,7 @@ elif opcion == 'Campeones':
         with col1:
             st.markdown(
                 """
-                <div style="margin-left: 90px; margin-right: 0px;">
+                <div style="margin-left: 80px; margin-right: 0px;">
                    <h3 style="color: white;">Historia</h3>
                 </div>
                 """,
@@ -472,7 +472,7 @@ elif opcion == 'Campeones':
         with col2:
             st.markdown(
                 """
-                <div style="margin-left: 120px; margin-right: 0px;">
+                <div style="margin-left: 140px; margin-right: 0px;">
                     <h3 style="color: white;">Información</h3>
                 </div>
                 """,
