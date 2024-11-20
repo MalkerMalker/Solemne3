@@ -177,32 +177,189 @@ if opcion == 'Información':
     st.altair_chart(chart, use_container_width=True)
     
 elif opcion == 'Campeones':
-    col1, col2, col3, col4, col5, col6, col7, col8, col9, col10 = st.columns(10)
-    with col1:
-        st.markdown("""
-<a href="https://www.youtube.com/watch?v=aR-KAldshAE" target="_blank">
-    <img src="imagenes/eclipseinf.jpg" alt="Imagen de fondo" style="width:100%; height:auto; cursor: pointer;">
-</a>
-""", unsafe_allow_html=True)
-        #st.image("imagenes/eclipseinf.jpg")
-    with col2:
-        st.image("imagenes/ludencompanioninf.jpg")
-    with col3:
-        st.image("imagenes/eclipseinf.jpg")
-    with col4:
-        st.image("imagenes/ludencompanioninf.jpg")
-    with col5:
-        st.image("imagenes/eclipseinf.jpg")
-    with col6:
-        st.image("imagenes/ludencompanioninf.jpg")
-    with col7:
-        st.image("imagenes/eclipseinf.jpg")
-    with col8:
-        st.image("imagenes/ludencompanioninf.jpg")
-    with col9:
-        st.image("imagenes/eclipseinf.jpg")
-    with col10:
-        st.image("imagenes/ludencompanioninf.jpg")
+    st.sidebar.title("Lista de campeones")
+    
+    # Variable para guardar el mensaje seleccionado
+    mensaje = ""
+    
+    # Configuración de los botones en el sidebar
+    with st.sidebar:    
+        for img, title in [("imagenes/iconos/aatrox.jpg", "Aatrox"),
+                           ("imagenes/iconos/ahri.jpg", "Ahri"),
+                           ("imagenes/iconos/akali.jpg", "Akali"),
+                           ("imagenes/iconos/akshan.jpg", "Akshan"),
+                           ("imagenes/iconos/alistar.jpg", "Alistar"),
+                           ("imagenes/iconos/ambessa.jpg", "Ambessa"),
+                           ("imagenes/iconos/amumu.jpg", "Amumu"),
+                           ("imagenes/iconos/anivia.jpg", "Anivia"),
+                           ("imagenes/iconos/annie.jpg", "Annie"),
+                           ("imagenes/iconos/aphelios.jpg", "Aphelios"),
+                           ("imagenes/iconos/ashe.jpg", "Ashe"),
+                           ("imagenes/iconos/aurelion.jpg", "Aurelion"),
+                           ("imagenes/iconos/azir.jpg", "Azir"),
+                           ("imagenes/iconos/bardo.jpg", "Bardo"),
+                           ("imagenes/iconos/belvet.jpg", "Belvet"),
+                           ("imagenes/iconos/blitzcrank.jpg", "Blitzcrank"),
+                           ("imagenes/iconos/brand.jpg", "Brand"),
+                           ("imagenes/iconos/braum.jpg", "Braum"),
+                           ("imagenes/iconos/caitlyn.jpg", "Caitlyn"),
+                           ("imagenes/iconos/camille.jpg", "Camille"),
+                           ("imagenes/iconos/cassiopeia.jpg", "Cassiopeia"),
+                           ("imagenes/iconos/chogath.jpg", "Chogath"),
+                           ("imagenes/iconos/corki.jpg", "Corki"),
+                           ("imagenes/iconos/darius.jpg", "Darius"),
+                           ("imagenes/iconos/diana.jpg", "Diana"),
+                           ("imagenes/iconos/draven.jpg", "Draven"),
+                           ("imagenes/iconos/drmundo.jpg", "Drmundo"),
+                           ("imagenes/iconos/ekko.jpg", "Ekko"),
+                           ("imagenes/iconos/elisse.jpg", "Elisse"),
+                           ("imagenes/iconos/evelynn.jpg", "Evelynn"),
+                           ("imagenes/iconos/ezreal.jpg", "Ezreal"),
+                           ("imagenes/iconos/fiddlesticks.jpg", "Fiddlesticks"),
+                           ("imagenes/iconos/fiora.jpg", "Fiora"),
+                           ("imagenes/iconos/fizz.jpg", "Fizz"),
+                           ("imagenes/iconos/galio.jpg", "Galio"),
+                           ("imagenes/iconos/gangplank.jpg", "Gangplank"),
+                           ("imagenes/iconos/garen.jpg", "Garen"),
+                           ("imagenes/iconos/gnar.jpg", "Gnar"),
+                           ("imagenes/iconos/gragas.jpg", "Gragas"),
+                           ("imagenes/iconos/graves.jpg", "Graves"),
+                           ("imagenes/iconos/gwen.jpg", "Gwen"),
+                           ("imagenes/iconos/hecarim.jpg", "Hecarim"),
+                           ("imagenes/iconos/heimerdinger.jpg", "Heimerdinger"),
+                           ("imagenes/iconos/illaoi.jpg", "Illaoi"),
+                           ("imagenes/iconos/irelia.jpg", "Irelia"),
+                           ("imagenes/iconos/ivern.jpg", "Ivern"),
+                           ("imagenes/iconos/janna.jpg", "Janna"),
+                           ("imagenes/iconos/jarvan.jpg", "Jarvan"),
+                           ("imagenes/iconos/jax.jpg", "Jax"),
+                           ("imagenes/iconos/jayce.jpg", "Jayce"),
+                           ("imagenes/iconos/jhin.jpg", "Jhin"),
+                           ("imagenes/iconos/jinx.jpg", "Jinx"),
+                           ("imagenes/iconos/kaisa.jpg", "Kaisa"),
+                           ("imagenes/iconos/kalista.jpg", "Kalista"),
+                           ("imagenes/iconos/karma.jpg", "Karma"),
+                           ("imagenes/iconos/karthus.jpg", "Karthus"),
+                           ("imagenes/iconos/kassadin.jpg", "Kassadin"),
+                           ("imagenes/iconos/katarina.jpg", "Katarina"),
+                           ("imagenes/iconos/kayle.jpg", "Kayle"),
+                           ("imagenes/iconos/kayn.jpg", "Kayn"),
+                           ("imagenes/iconos/kennen.jpg", "Kennen"),
+                           ("imagenes/iconos/khazix.jpg", "Khazix"),
+                           ("imagenes/iconos/kindred.jpg", "Kindred"),
+                           ("imagenes/iconos/kled.jpg", "Kled"),
+                           ("imagenes/iconos/kogmaw.jpg", "Kogmaw"),
+                           ("imagenes/iconos/ksante.jpg", "Ksante"),
+                           ("imagenes/iconos/leblanc.jpg", "Leblanc"),
+                           ("imagenes/iconos/leesin.jpg", "Leesin"),
+                           ("imagenes/iconos/leona.jpg", "Leona"),
+                           ("imagenes/iconos/lillia.jpg", "Lillia"),
+                           ("imagenes/iconos/lissandra.jpg", "Lissandra"),
+                           ("imagenes/iconos/lucian.jpg", "Lucian"),
+                           ("imagenes/iconos/lulu.jpg", "Lulu"),
+                           ("imagenes/iconos/lux.jpg", "Lux"),
+                           ("imagenes/iconos/malphite.jpg", "Malphite"),
+                           ("imagenes/iconos/malzahar.jpg", "Malzahar"),
+                           ("imagenes/iconos/maokai.jpg", "Maokai"),
+                           ("imagenes/iconos/miss fortune.jpg", "Miss fortune"),
+                           ("imagenes/iconos/mordekaiser.jpg", "Mordekaiser"),
+                           ("imagenes/iconos/morgana.jpg", "Morgana"),
+                           ("imagenes/iconos/nami.jpg", "Nami"),
+                           ("imagenes/iconos/nasus.jpg", "Nasus"),
+                           ("imagenes/iconos/nautilus.jpg", "Nautilus"),
+                           ("imagenes/iconos/neeko.jpg", "Neeko"),
+                           ("imagenes/iconos/nidalee.jpg", "Nidalee"),
+                           ("imagenes/iconos/nilah.jpg", "Nilah"),
+                           ("imagenes/iconos/nocturne.jpg", "Nocturne"),
+                           ("imagenes/iconos/nunu.jpg", "Nunu"),
+                           ("imagenes/iconos/olaf.jpg", "Olaf"),
+                           ("imagenes/iconos/orianna.jpg", "Orianna"),
+                           ("imagenes/iconos/ornn.jpg", "Ornn"),
+                           ("imagenes/iconos/pantheon.jpg", "Pantheon"),
+                           ("imagenes/iconos/poppy.jpg", "Poppy"),
+                           ("imagenes/iconos/pyke.jpg", "Pyke"),
+                           ("imagenes/iconos/qiyana.jpg", "Qiyana"),
+                           ("imagenes/iconos/quinn.jpg", "Quinn"),
+                           ("imagenes/iconos/rammus.jpg", "Rammus"),
+                           ("imagenes/iconos/renataglasc.jpg", "Renataglasc"),
+                           ("imagenes/iconos/renekton.jpg", "Renekton"),
+                           ("imagenes/iconos/rengar.jpg", "Rengar"),
+                           ("imagenes/iconos/riven.jpg", "Riven"),
+                           ("imagenes/iconos/rumble.jpg", "Rumble"),
+                           ("imagenes/iconos/ryze.jpg", "Ryze"),
+                           ("imagenes/iconos/sejuani.jpg", "Sejuani"),
+                           ("imagenes/iconos/senna.jpg", "Senna"),
+                           ("imagenes/iconos/seraphine.jpg", "Seraphine"),
+                           ("imagenes/iconos/sett.jpg", "Sett"),
+                           ("imagenes/iconos/shaco.jpg", "Shaco"),
+                           ("imagenes/iconos/shen.jpg", "Shen"),
+                           ("imagenes/iconos/shyvana.jpg", "Shyvana"),
+                           ("imagenes/iconos/singed.jpg", "Singed"),
+                           ("imagenes/iconos/sion.jpg", "Sion"),
+                           ("imagenes/iconos/sivir.jpg", "Sivir"),
+                           ("imagenes/iconos/skarner.jpg", "Skarner"),
+                           ("imagenes/iconos/sona.jpg", "Sona"),
+                           ("imagenes/iconos/soraka.jpg", "Soraka"),
+                           ("imagenes/iconos/swain.jpg", "Swain"),
+                           ("imagenes/iconos/sylas.jpg", "Sylas"),
+                           ("imagenes/iconos/syndra.jpg", "Syndra"),
+                           ("imagenes/iconos/taliyah.jpg", "Taliyah"),
+                           ("imagenes/iconos/talon.jpg", "Talon"),
+                           ("imagenes/iconos/taric.jpg", "Taric"),
+                           ("imagenes/iconos/teemo.jpg", "Teemo"),
+                           ("imagenes/iconos/thresh.jpg", "Thresh"),
+                           ("imagenes/iconos/tristana.jpg", "Tristana"),
+                           ("imagenes/iconos/trundle.jpg", "Trundle"),
+                           ("imagenes/iconos/tryndamere.jpg", "Tryndamere"),
+                           ("imagenes/iconos/twistedfate.jpg", "Twistedfate"),
+                           ("imagenes/iconos/twitch.jpg", "Twitch"),
+                           ("imagenes/iconos/udyr.jpg", "Udyr"),
+                           ("imagenes/iconos/urgot.jpg", "Urgot"),
+                           ("imagenes/iconos/varus.jpg", "Varus"),
+                           ("imagenes/iconos/vayne.jpg", "Vayne"),
+                           ("imagenes/iconos/veigar.jpg", "Veigar"),
+                           ("imagenes/iconos/velkoz.jpg", "Velkoz"),
+                           ("imagenes/iconos/vex.jpg", "Vex"),
+                           ("imagenes/iconos/vi.jpg", "Vi"),
+                           ("imagenes/iconos/viego.jpg", "Viego"),
+                           ("imagenes/iconos/viktor.jpg", "Viktor"),
+                           ("imagenes/iconos/vladimir.jpg", "Vladimir"),
+                           ("imagenes/iconos/volibear.jpg", "Volibear"),
+                           ("imagenes/iconos/warwick.jpg", "Warwick"),
+                           ("imagenes/iconos/wukong.jpg", "Wukong"),
+                           ("imagenes/iconos/xerath.jpg", "Xerath"),
+                           ("imagenes/iconos/xinzhao.jpg", "Xinzhao"),
+                           ("imagenes/iconos/yasuo.jpg", "Yasuo"),
+                           ("imagenes/iconos/yi.jpg", "Yi"),
+                           ("imagenes/iconos/yone.jpg", "Yone"),
+                           ("imagenes/iconos/yuumi.jpg", "Yuumi"),
+                           ("imagenes/iconos/zac.jpg", "Zac"),
+                           ("imagenes/iconos/zed.jpg", "Zed"),
+                           ("imagenes/iconos/zeri.jpg", "Zeri"),
+                           ("imagenes/iconos/ziggs.jpg", "Ziggs"),
+                           ("imagenes/iconos/zilean.jpg", "Zilean"),
+                           ("imagenes/iconos/zoe.jpg", "Zoe"),
+                           ("imagenes/iconos/zyra.jpg", "Zyra")]:
+            col1, col2 = st.columns([1, 1])  # Proporciones iguales para columnas
+            with col1:
+                st.image(img, width=60)  # Ajusta el tamaño de la imagen
+            with col2:
+                if st.button(title):  # Al presionar un botón, se actualiza el mensaje
+                    mensaje = title
+    
+    # Mostrar el mensaje en la página principal
+    if title:
+        st.markdown(
+        f"""
+        <div style="text-align: center;">
+            <h1 style="color: white;">{mensaje}</h1>
+        </div>
+        """,
+        unsafe_allow_html=True
+        )
+
+                
+
 
 elif opcion == 'Competitivo':
     st.write("wena")
