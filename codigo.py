@@ -332,7 +332,7 @@ elif opcion == 'Campeones':
                            ("imagenes/iconos/xerath.jpg", "Xerath"),
                            ("imagenes/iconos/xinzhao.jpg", "Xinzhao"),
                            ("imagenes/iconos/yasuo.jpg", "Yasuo"),
-                           ("imagenes/iconos/yi.jpg", "Yi"),
+                           ("imagenes/iconos/yi.jpg", "Maestro Yi"),
                            ("imagenes/iconos/yone.jpg", "Yone"),
                            ("imagenes/iconos/yuumi.jpg", "Yuumi"),
                            ("imagenes/iconos/zac.jpg", "Zac"),
