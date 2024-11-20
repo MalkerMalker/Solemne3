@@ -445,7 +445,7 @@ elif opcion == 'Campeones':
             with icon_col2:
                 st.image(tagimagen2, width=40)
             with texto:
-                st.write(tagtexto,tagtexto2)  
+                st.write(tagtexto,",",tagtexto2)  
         
     else:
         st.write("Selecciona un campeon")
