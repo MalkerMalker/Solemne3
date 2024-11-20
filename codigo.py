@@ -480,7 +480,7 @@ elif opcion == 'Campeones':
             )
 
             desc, icon_col1, texto, icon_col2, texto2 = st.columns([3,1,3,1,3])
-            with icon_col1:
+            with desc:
                 st.write("Rol:")
                 st.write("Pocisión:")
             with icon_col1:
