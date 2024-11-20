@@ -391,7 +391,7 @@ elif opcion == 'Campeones':
             roltexto2 = "Jungla"
         elif role2 == None:
             rolimagen2 = "imagenes/assets/invisible.png"
-            roltexto2 = ""
+            roltexto2 = "‎ "
             
         tags = dfchamp.loc[dfchamp["Name"] == mensaje, "Tags"].values[0]
         tags_split = tags.split(",") 
@@ -439,7 +439,7 @@ elif opcion == 'Campeones':
             tagtexto2 = "Tirador"
         elif tag2 == None:
             tagimagen2 = "imagenes/assets/invisible.png"
-            tagtexto2 = ""
+            tagtexto2 = "‎ "
 
         
         range = dfchamp.loc[dfchamp["Name"] == mensaje, "Range type"].values[0]
