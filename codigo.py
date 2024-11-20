@@ -445,9 +445,9 @@ elif opcion == 'Campeones':
             subcol1, subcol2 = st.columns([1, 3])  # Subcolumnas para las imágenes y el texto
             with subcol1:
                 if tagimagen:
-                    st.image(tagimagen, width=50, caption="Tag 1")
+                    st.image(tagimagen, width=50)
                 if tagimagen2:
-                    st.image(tagimagen2, width=50, caption="Tag 2")
+                    st.image(tagimagen2, width=50)
             with subcol2:
                 st.write(tagtexto)
                 if tagtexto2:
