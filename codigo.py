@@ -399,7 +399,7 @@ elif opcion == 'Campeones':
         elif tag2 == "Support":
             tagimagen2 = "imagenes/assets/support.png"
             tagtexto2 = "Soporte"
-        elif tag2 == "":
+        elif tag2 == None:
             tagimagen2 = "imagenes/assets/invisible.png"
             tagtexto2 = ""
         
