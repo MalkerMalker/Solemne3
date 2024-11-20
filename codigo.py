@@ -354,9 +354,9 @@ elif opcion == 'Campeones':
         informacion = dfchamp.loc[dfchamp["Name"] == mensaje, "Informacion"].values[0]
 
         role = dfchamp.loc[dfchamp["Name"] == mensaje, "Role"].values[0]
-        roles_split = tags.split(",") 
-        role1 = roles_split[0] if len(tags_split) > 0 else None
-        role2 = roles_split[1] if len(tags_split) > 1 else None
+        roles_split = role.split(",") 
+        role1 = roles_split[0] if len(roles_split) > 0 else None
+        role2 = roles_split[1] if len(roles_split) > 1 else None
         roltexto2 = ""
         if role1 == "Top":
             rolimagen = "imagenes/assets/top.png"
