@@ -579,10 +579,10 @@ elif opcion == 'Campeones':
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
-                st.image("imagenes/assets/invisible.png",width=30)
-                st.image("imagenes/assets/invisible.png",width=30)
+                st.image("imagenes/assets/invisible.png",width=25)
+                st.image("imagenes/assets/invisible.png",width=25)
                 st.image("imagenes/assets/saludpornivel.png",width=30)
-                st.image("imagenes/assets/manapornivel.png", width=20)
+                st.image("imagenes/assets/manapornivel.png", width=30)
                 st.image("imagenes/assets/invisible.png",width=16)
                 st.image("imagenes/assets/armadurabase.png", width=25)
                 st.image("imagenes/assets/resistenciamagica.png", width=25)
