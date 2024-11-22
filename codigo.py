@@ -538,10 +538,12 @@ elif opcion == 'Campeones':
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
                 st.image(rangeimagen, width=25)
+                st.imagen(rtypeimagen, width=30)
             with texto:
                 st.write(tagtexto)
                 st.write(roltexto)
                 st.write(rangetexto)
+                st.write(rtypetexto)
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
