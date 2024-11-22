@@ -611,7 +611,7 @@ elif opcion == 'Campeones':
         st.altair_chart(chart, use_container_width=True)
         
     else:
-        st.write("Selecciona un campeon")
+        st.write("Selecciona un campeon de la barra lateral")
 
 
 elif opcion == 'Competitivo':
