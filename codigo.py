@@ -19,11 +19,11 @@ dfchamp = pd.read_csv("LoL_champions.csv")
 
 #base de datos pandas en informacion
 dfinf = pd.read_csv("backloggd_games.csv")
-def convertir_k(valor):
-    if isinstance(valor, str) and "K" in valor:
-        return float(valor.replace("K", "")) * 1000
-    else:
-        return float(valor)
+    def convertir_k(valor):
+        if isinstance(valor, str) and "K" in valor:
+            return float(valor.replace("K", "")) * 1000
+        else:
+            return float(valor)
 dfinf["Playing"] = dfinf["Playing"].apply(convertir_k)
 dfinf = dfinf.sort_values("Playing", ascending=False)
 dfinf['highlight'] = dfinf['Title'].apply(lambda x: 'highlight' if x == 'League of Legends' else 'normal')
@@ -552,8 +552,8 @@ elif opcion == 'Campeones':
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
-                st.image(rangeimagen, width=20)
-                st.image(rtypeimagen, width=25)
+                st.image(rangeimagen, width=30)
+                st.image(rtypeimagen, width=30)
                 st.image("imagenes/assets/salud.png", width=20)
                 st.image("imagenes/assets/mana.png", width=23)
                 st.image("imagenes/assets/velocidad de movimiento.png")
