@@ -485,6 +485,9 @@ elif opcion == 'Campeones':
         elif rtype == "z":
             rtypeimagen = "imagenes/assets/manaless.png"
             rtypetexto = "‎Sin recurso"
+
+        hpbase = dfchamp.loc[dfchamp["Name"] == mensaje, "Base HP"].values[0]
+        hpnivel = dfchamp.loc[dfchamp["Name"] == mensaje, "HP per lvl"].values[0]
             
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
@@ -533,7 +536,7 @@ elif opcion == 'Campeones':
                 st.write("Pocisión:")
                 st.write("Rango:")
                 st.write("Recurso:")
-                st.write("HP/HP+Nivel:")
+                st.write("HP/HP+:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
@@ -557,7 +560,7 @@ elif opcion == 'Campeones':
                 st.write(roltexto2)
                 st.write(txtinvisible)
                 st.write(txtinvisible)
-                st.write(hppornivel)
+                st.write(hpnivel)
                 
         chart = alt.Chart(dfinf).mark_bar().encode(
         x=alt.X("Playing", title="Escalado de recurso"),
