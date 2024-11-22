@@ -576,7 +576,7 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/invisible.png",width=30)
                 st.image("imagenes/assets/invisible.png",width=30)
                 st.image("imagenes/assets/saludpornivel.png",width=30)
-                st.image("imagenes/assets/manapornivel.png", width=30)
+                st.image("imagenes/assets/manapornivel.png", width=20)
                 st.image("imagenes/assets/invisible.png",width=16)
                 st.image("imagenes/assets/armadurabase.png", width=30)
             with texto2:
