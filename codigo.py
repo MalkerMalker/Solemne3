@@ -452,37 +452,35 @@ elif opcion == 'Campeones':
 
         rtype = dfchamp.loc[dfchamp["Name"] == mensaje, "Resourse type"].values[0]
         if rtype == "Blood Well":
-            rtypeimagen = "imagenes/assets/gotasangre.png"
-            rtypetexto = "Blood Well"
-            
+            rtypeimagen = "imagenes/assets/manaresource.png"
+            rtypetexto = "Pozo de sangre"
         elif rtype == "Mana":
-            rtypeimagen = "imagenes/assets/mana.png"
+            rtypeimagen = "imagenes/assets/manaresource.png"
             rtypetexto = "Mana"
-            
         elif rtype == "Energy":
             rtypeimagen = "imagenes/assets/energy.png"
             rtypetexto = "Energia"
-        
         elif rtype == "Fury":
             rtypeimagen = "imagenes/assets/furia.png"
             rtypetexto = "Furia"
-        
         elif rtype == "Ferocity":
-            rtypeimagen = "imagenes/assets/ferocidad.png"
+            rtypeimagen = "imagenes/assets/furia.png"
             rtypetexto = "Ferocidad"
-            
         elif rtype == "Heat":
-            rtypeimagen = "imagenes/assets/calor.png"
-            rtypetexto = "calor"
-        
+            rtypeimagen = "imagenes/assets/carga.png"
+            rtypetexto = "Calor"
         elif rtype == "Grit":
-            rtypeimagen = "imagenes/assets/coraje.png"
-            rtypetexto = "coraje"
-            
+            rtypeimagen = "imagenes/assets/furia.png"
+            rtypetexto = "Coraje"
         elif rtype == "Flow":
-            rtypeimagen = "imagenes/assets/fluir.png"
-            rtypetexto = "fluir"
-
+            rtypeimagen = "imagenes/assets/flujo.png"
+            rtypetexto = "Flujo"
+        elif rtype == "Courage":
+            rtypeimagen = "imagenes/assets/furia.png"
+            rtypetexto = "Coraje"
+        elif rtype == "Crimson Rush":
+            rtypeimagen = "imagenes/assets/manaresource.png"
+            rtypetexto = "Drenaje de sangre"
         elif rtype == None:
             rtypeimagen = "imagenes/assets/invisible.png"
             rtypetexto = "‎ "
