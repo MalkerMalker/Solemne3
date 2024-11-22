@@ -551,7 +551,7 @@ elif opcion == 'Campeones':
                 st.write("HP/HP+:")
                 st.write("Mana/M+:")
                 st.write("Vel.Mov:")
-                st.write("Arm/Arm+:")
+                st.write("Arm/Ar+:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
@@ -578,7 +578,7 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/saludpornivel.png",width=30)
                 st.image("imagenes/assets/manapornivel.png", width=30)
                 st.image("imagenes/assets/invisible.png",width=30)
-                st.image("imagenes/assets/armadurapornivel.png",width=30)
+                st.image("imagenes/assets/armadurapornivel.png",width=20)
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)
