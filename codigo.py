@@ -564,8 +564,8 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/salud.png", width=20)
                 st.image("imagenes/assets/mana.png", width=23)
                 st.image("imagenes/assets/velocidad de movimiento.png")
-                st.image("imagenes/assets/armadurabase.png", width=30)
-                st.image("imagenes/assets/resistenciamagica.png", width=30)
+                st.image("imagenes/assets/armadurabase.png", width=25)
+                st.image("imagenes/assets/resistenciamagica.png", width=25)
             with texto:
                 st.write(tagtexto)
                 st.write(roltexto)
@@ -584,8 +584,8 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/saludpornivel.png",width=30)
                 st.image("imagenes/assets/manapornivel.png", width=20)
                 st.image("imagenes/assets/invisible.png",width=16)
-                st.image("imagenes/assets/armadurabase.png", width=30)
-                st.image("imagenes/assets/resistenciamagica.png", width=30)
+                st.image("imagenes/assets/armadurabase.png", width=25)
+                st.image("imagenes/assets/resistenciamagica.png", width=25)
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)
