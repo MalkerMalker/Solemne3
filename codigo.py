@@ -556,7 +556,7 @@ elif opcion == 'Campeones':
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
                 st.image(rangeimagen, width=30)
-                st.image(rtypeimagen, width=30)
+                st.image(rtypeimagen, width=25)
                 st.image("imagenes/assets/salud.png", width=20)
                 st.image("imagenes/assets/mana.png", width=23)
                 st.image("imagenes/assets/velocidad de movimiento.png")
