@@ -561,8 +561,9 @@ elif opcion == 'Campeones':
         height=400
         )
     
-    # Mostrar el gráfico en Streamlit
-    st.altair_chart(chart, use_container_width=True)
+        # Mostrar el gráfico en Streamlit
+        st.altair_chart(chart, use_container_width=True)
+        
     else:
         st.write("Selecciona un campeon")
 
