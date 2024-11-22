@@ -452,7 +452,13 @@ elif opcion == 'Campeones':
 
         rtype = dfchamp.loc[dfchamp["Name"] == mensaje, "Resourse type"].values[0]
         if rtype == "Blood Well":
-            imagensangre = "imagenes/assets/melee.png"
+            rtypeimagen = "imagenes/assets/gotasangre.png"
+            rtypetexto = "Blood Well"
+            
+        elif range == "Ranged":
+            rangeimagen = "imagenes/assets/rango.png"
+            rangetexto = "Distancia"
+
         
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
