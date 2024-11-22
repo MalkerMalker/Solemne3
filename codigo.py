@@ -552,11 +552,11 @@ elif opcion == 'Campeones':
                 st.write(roltexto2)  
                 
         chart = alt.Chart(dfinf).mark_bar().encode(
-        x=alt.X("Playing", title="Jugadores activos"),
-        y=alt.Y("Title", title="Juegos", sort=None),
+        x=alt.X("Playing", title="Escalado de recurso"),
+        y=alt.Y("Title", title=f"Campeones", sort=None),
         color=alt.Color('highlight:N', legend=None, scale=alt.Scale(domain=['normal', 'highlight'], range=['#cccccc', 'lightgreen']))
         ).properties(
-        title="Número de Jugadores por Título",
+        title=f"Comparacion de {mensaje} con todos los {roltexto",
         width=200,
         height=400
         )
