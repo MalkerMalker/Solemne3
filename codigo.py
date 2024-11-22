@@ -350,7 +350,7 @@ elif opcion == 'Campeones':
                     mensaje = title
     if title:
     # Filtrar la fila con el mensaje dado
-    fila = dfchamp[dfchamp["Name"] == mensaje]
+        fila = dfchamp[dfchamp["Name"] == mensaje]
     
     if not fila.empty:  # Verifica si existe alguna coincidencia
         # Obtener información y roles
