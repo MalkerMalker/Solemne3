@@ -550,7 +550,19 @@ elif opcion == 'Campeones':
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)  
-        
+                
+        chart = alt.Chart(dfinf).mark_bar().encode(
+        x=alt.X("Playing", title="Jugadores activos"),
+        y=alt.Y("Title", title="Juegos", sort=None),
+        color=alt.Color('highlight:N', legend=None, scale=alt.Scale(domain=['normal', 'highlight'], range=['#cccccc', 'lightgreen']))
+        ).properties(
+        title="Número de Jugadores por Título",
+        width=200,
+        height=400
+        )
+    
+    # Mostrar el gráfico en Streamlit
+    st.altair_chart(chart, use_container_width=True)
     else:
         st.write("Selecciona un campeon")
 
