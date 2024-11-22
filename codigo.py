@@ -481,7 +481,7 @@ elif opcion == 'Campeones':
         elif rtype == "Crimson Rush":
             rtypeimagen = "imagenes/assets/manaresource.png"
             rtypetexto = "Drenaje de sangre"
-        elif rtype == None:
+        elif rtype == "m":
             rtypeimagen = "imagenes/assets/manaless.png"
             rtypetexto = "‎Sin recurso"
             
