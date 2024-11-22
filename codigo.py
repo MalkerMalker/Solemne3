@@ -546,7 +546,7 @@ elif opcion == 'Campeones':
                 st.image(rangeimagen, width=20)
                 st.image(rtypeimagen, width=25)
                 st.image("imagenes/assets/salud.png", width=20)
-                st.image("imagenes/assets/mana.png", width=28)
+                st.image("imagenes/assets/mana.png", width=23)
             with texto:
                 st.write(tagtexto)
                 st.write(roltexto)
