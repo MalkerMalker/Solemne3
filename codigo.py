@@ -349,20 +349,20 @@ elif opcion == 'Campeones':
                 if st.button(title): 
                     mensaje = title
             if title:
-        # Filtrar la fila con el mensaje dado
-            fila = dfchamp[dfchamp["Name"] == mensaje]
+    # Filtrar la fila con el mensaje dado
+    fila = dfchamp[dfchamp["Name"] == mensaje]
+    
+    if not fila.empty:  # Verifica si existe alguna coincidencia
+        # Obtener información y roles
+        informacion = fila["Informacion"].values[0]
+        role = fila["Role"].values[0]
+        roles_split = role.split(",") 
+        role1 = roles_split[0] if len(roles_split) > 0 else None
+        role2 = roles_split[1] if len(roles_split) > 1 else None
         
-            if not fila.empty:  # Verifica si existe alguna coincidencia
-                # Obtener información y roles
-                informacion = fila["Informacion"].values[0]
-                role = fila["Role"].values[0]
-                roles_split = role.split(",") 
-                role1 = roles_split[0] if len(roles_split) > 0 else None
-                role2 = roles_split[1] if len(roles_split) > 1 else None
-            
-            # Variables de texto inicializadas
-            txtinvisible = "‎‎ "
-            roltexto2 = "‎‎ "
+        # Variables de texto inicializadas
+        txtinvisible = "‎‎ "
+        roltexto2 = "‎‎ "
         if role1 == "Top":
             rolimagen = "imagenes/assets/top.png"
             roltexto = "Carril superior"
