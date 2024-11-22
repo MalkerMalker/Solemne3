@@ -545,7 +545,7 @@ elif opcion == 'Campeones':
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
-                st.image("imagenes/assets/invisible.png",width=30
+                st.image("imagenes/assets/invisible.png",width=30)
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)
