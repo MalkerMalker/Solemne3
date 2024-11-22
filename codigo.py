@@ -483,7 +483,7 @@ elif opcion == 'Campeones':
             rtypeimagen = "imagenes/assets/fluir.png"
             rtypetexto = "fluir"
 
-        elif rtype == "None":
+        elif rtype == None:
             rtypeimagen = "imagenes/assets/invisible.png"
             rtypetexto = "‎ "
             
