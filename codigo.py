@@ -540,7 +540,7 @@ elif opcion == 'Campeones':
                 st.write("Rango:")
                 st.write("Recurso:")
                 st.write("HP/HP+:")
-                st.write("Mana/Mana+:")
+                st.write("Mana/M+:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
