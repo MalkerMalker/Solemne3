@@ -19,10 +19,10 @@ dfchamp = pd.read_csv("LoL_champions.csv")
 
 #base de datos pandas en informacion
 dfinf = pd.read_csv("backloggd_games.csv")
-    def convertir_k(valor):
-        if isinstance(valor, str) and "K" in valor:
-            return float(valor.replace("K", "")) * 1000
-        else:
+def convertir_k(valor):
+    if isinstance(valor, str) and "K" in valor:
+        return float(valor.replace("K", "")) * 1000
+    else:
             return float(valor)
 dfinf["Playing"] = dfinf["Playing"].apply(convertir_k)
 dfinf = dfinf.sort_values("Playing", ascending=False)
