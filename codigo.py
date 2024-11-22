@@ -482,8 +482,8 @@ elif opcion == 'Campeones':
             rtypeimagen = "imagenes/assets/manaresource.png"
             rtypetexto = "Drenaje de sangre"
         elif rtype == None:
-            rtypeimagen = "imagenes/assets/invisible.png"
-            rtypetexto = "‎ "
+            rtypeimagen = "imagenes/assets/manaless.png"
+            rtypetexto = "‎Sin recurso"
             
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
