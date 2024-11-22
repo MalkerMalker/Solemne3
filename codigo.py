@@ -357,7 +357,7 @@ elif opcion == 'Campeones':
         roles_split = role.split(",") 
         role1 = roles_split[0] if len(roles_split) > 0 else None
         role2 = roles_split[1] if len(roles_split) > 1 else None
-        roltexto2 = "‎ "
+        roltexto2 = "‎‎ "
         if role1 == "Top":
             rolimagen = "imagenes/assets/top.png"
             roltexto = "Carril superior"
@@ -545,9 +545,11 @@ elif opcion == 'Campeones':
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
+                st.image("imagenes/assets/invisible.png",width=30
             with texto2:
                 st.write(tagtexto2)  
-                st.write(roltexto2)  
+                st.write(roltexto2)
+                st.write(roltexto2)
                 
         chart = alt.Chart(dfinf).mark_bar().encode(
         x=alt.X("Playing", title="Escalado de recurso"),
