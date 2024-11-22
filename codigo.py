@@ -348,7 +348,7 @@ elif opcion == 'Campeones':
             with col2:
                 if st.button(title): 
                     mensaje = title
-            if title:
+    if title:
     # Filtrar la fila con el mensaje dado
     fila = dfchamp[dfchamp["Name"] == mensaje]
     
