@@ -533,26 +533,31 @@ elif opcion == 'Campeones':
                 st.write("Pocisión:")
                 st.write("Rango:")
                 st.write("Recurso:")
+                st.write("HP/HP+Nivel:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
                 st.image(rangeimagen, width=20)
                 st.image(rtypeimagen, width=25)
+                st.image("imagenes/assets/salud.png", width=30)
             with texto:
                 st.write(tagtexto)
                 st.write(roltexto)
                 st.write(rangetexto)
                 st.write(rtypetexto)
+                st.write(hpbase)
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
                 st.image("imagenes/assets/invisible.png",width=30)
                 st.image("imagenes/assets/invisible.png",width=30)
+                st.image("imagenes/assets/saludpornivel.png",width=30)
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)
                 st.write(txtinvisible)
                 st.write(txtinvisible)
+                st.write(hppornivel)
                 
         chart = alt.Chart(dfinf).mark_bar().encode(
         x=alt.X("Playing", title="Escalado de recurso"),
