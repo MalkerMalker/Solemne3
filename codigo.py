@@ -499,7 +499,7 @@ elif opcion == 'Campeones':
         velmov = dfchamp.loc[dfchamp["Name"] == mensaje, "Movement speed"].values[0]
 
         armor = dfchamp.loc[dfchamp["Name"] == mensaje, "Base armor"].values[0]
-        armorlevel = dfchamp.loc[dfchamp["Name"] == mensaje, "Armor per lvl"].values[0]
+        armorlvl = dfchamp.loc[dfchamp["Name"] == mensaje, "Armor per lvl"].values[0]
         
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
