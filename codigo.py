@@ -455,11 +455,38 @@ elif opcion == 'Campeones':
             rtypeimagen = "imagenes/assets/gotasangre.png"
             rtypetexto = "Blood Well"
             
-        elif range == "Ranged":
-            rangeimagen = "imagenes/assets/rango.png"
-            rangetexto = "Distancia"
-
+        elif rtype == "Mana":
+            rtypeimagen = "imagenes/assets/mana.png"
+            rtypetexto = "Mana"
+            
+        elif rtype == "Energy":
+            rtypeimagen = "imagenes/assets/energy.png"
+            rtypetexto = "Energia"
         
+        elif rtype == "Fury":
+            rtypeimagen = "imagenes/assets/furia.png"
+            rtypetexto = "Furia"
+        
+        elif rtype == "Ferocity":
+            rtypeimagen = "imagenes/assets/ferocidad.png"
+            rtypetexto = "Ferocidad"
+            
+        elif rtype == "Heat":
+            rtypeimagen = "imagenes/assets/calor.png"
+            rtypetexto = "calor"
+        
+        elif rtype == "Grit":
+            rtypeimagen = "imagenes/assets/coraje.png"
+            rtypetexto = "coraje"
+            
+        elif rtype == "Flow":
+            rtypeimagen = "imagenes/assets/fluir.png"
+            rtypetexto = "fluir"
+
+        elif rtype == "None":
+            rtypeimagen = "imagenes/assets/invisible.png"
+            rtypetexto = "‎ "
+            
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
         
