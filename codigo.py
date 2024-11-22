@@ -547,9 +547,11 @@ elif opcion == 'Campeones':
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
                 st.image("imagenes/assets/invisible.png",width=30)
+                st.image("imagenes/assets/invisible.png",width=30)
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)
+                st.write(txtinvisible)
                 st.write(txtinvisible)
                 
         chart = alt.Chart(dfinf).mark_bar().encode(
