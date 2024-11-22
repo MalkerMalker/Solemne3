@@ -491,6 +491,8 @@ elif opcion == 'Campeones':
         
         manabase = dfchamp.loc[dfchamp["Name"] == mensaje, "Base mana"].values[0]
         mananivel = dfchamp.loc[dfchamp["Name"] == mensaje, "Mana per lvl"].values[0]
+
+        velmov = dfchamp.loc[dfchamp["Name"] == mensaje, "Movement speed"].values[0]
             
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
@@ -541,6 +543,8 @@ elif opcion == 'Campeones':
                 st.write("Recurso:")
                 st.write("HP/HP+:")
                 st.write("Mana/M+:")
+                st.write("Vel.Mov:")
+                st.write("Armadura:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
@@ -548,6 +552,7 @@ elif opcion == 'Campeones':
                 st.image(rtypeimagen, width=25)
                 st.image("imagenes/assets/salud.png", width=20)
                 st.image("imagenes/assets/mana.png", width=23)
+                st.image("imagenes/assets/velocidad de movimiento.png"")
             with texto:
                 st.write(tagtexto)
                 st.write(roltexto)
@@ -555,6 +560,7 @@ elif opcion == 'Campeones':
                 st.write(rtypetexto)
                 st.write(hpbase)
                 st.write(manabase)
+                st.write(velmov)
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
@@ -562,6 +568,7 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/invisible.png",width=30)
                 st.image("imagenes/assets/saludpornivel.png",width=20)
                 st.image("imagenes/assets/manapornivel.png", width=20)
+                st.image("imagenes/assets/invisible.png",width=30)
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)
@@ -569,6 +576,7 @@ elif opcion == 'Campeones':
                 st.write(txtinvisible)
                 st.write(hpnivel)
                 st.write(mananivel)
+                st.write(txtinvisible)
                 
         chart = alt.Chart(dfinf).mark_bar().encode(
         x=alt.X("Playing", title="Escalado de recurso"),
