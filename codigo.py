@@ -515,7 +515,7 @@ elif opcion == 'Campeones':
         attackdmg = dfchamp.loc[dfchamp["Name"] == mensaje, "Attack damage"].values[0]
         attackdmgpl = dfchamp.loc[dfchamp["Name"] == mensaje, "Attack damage per lvl"].values[0]
 
-        if tag1,tag2 == "Mage":
+        if tag1 == "Mage" or tag2 == "Mage":
             imagendaño = "imagenes/assets/dañomagico.png"
         else:
             imagendaño = "imagenes/assets/dañofisico.png"
