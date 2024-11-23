@@ -641,10 +641,12 @@ elif opcion == 'Campeones':
                 """,
                 unsafe_allow_html=True)
                 
-        chart = alt.Chart(dfchamp).mark_line().encode(
+        chart = alt.Chart(dfchamp).mark_bar().encode(
             x='Name',
-            y='Base HP'
-        )
+            y=alt.Y('Base HP', sort='descending'),  # Ordenar el eje Y de mayor a menor
+            color='category',
+            tooltip=['category', 'value']
+        ).interactive()  # Habilita la interactividad
         
         # Mostrar el gráfico en Streamlit
         st.altair_chart(chart, use_container_width=True)
