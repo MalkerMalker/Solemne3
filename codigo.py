@@ -511,7 +511,15 @@ elif opcion == 'Campeones':
         
         manareg = dfchamp.loc[dfchamp["Name"] == mensaje, "Mana regeneration"].values[0]
         manaregniv = dfchamp.loc[dfchamp["Name"] == mensaje, "Mana regeneration per lvl"].values[0]
-       
+
+        attackdmg = dfchamp.loc[dfchamp["Name"] == mensaje, "Attack damage"].values[0]
+        attackdmgpl = dfchamp.loc[dfchamp["Name"] == mensaje, "Attack damage per lvl"].values[0]
+
+        if tag1,tag2 == "Mage":
+            imagendaño = "imagenes/assets/dañomagico.png"
+        else:
+            imagendaño = "imagenes/assets/dañofisico.png"
+            
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
         
@@ -567,7 +575,7 @@ elif opcion == 'Campeones':
                 st.write("Attack R:")
                 st.write("HPReg/+:")
                 st.write("M Reg/+:")
-                
+                st.write("AttckDmg:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
@@ -581,6 +589,7 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/rangodeataque.png", width=25)
                 st.image("imagenes/assets/healpower.png", width=25)
                 st.image("imagenes/assets/manaregenration.png", width=25)
+                st.image(imagendaño, width=25)
             with texto:
                 st.write(tagtexto)
                 st.write(roltexto)
@@ -594,6 +603,7 @@ elif opcion == 'Campeones':
                 st.write(attackrange)
                 st.write(hpreg)
                 st.write(manareg)
+                st.write(attackdmg)
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
@@ -607,6 +617,7 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/invisible.png",width=25)
                 st.image("imagenes/assets/healpower.png", width=25)
                 st.image("imagenes/assets/manaregenration.png", width=25)
+                st.image(imagendaño, width=25)
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)
@@ -620,6 +631,8 @@ elif opcion == 'Campeones':
                 st.write(txtinvisible)
                 st.write(hpregniv)
                 st.write(manaregniv)
+                st.write(attackdmgpl)
+                
                 
         chart = alt.Chart(dfinf).mark_bar().encode(
         x=alt.X("Playing", title="Escalado de recurso"),
