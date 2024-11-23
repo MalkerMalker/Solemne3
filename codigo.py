@@ -179,7 +179,6 @@ if opcion == 'Información':
     height=400
     )
     
-    # Mostrar el gráfico en Streamlit
     st.altair_chart(chart, use_container_width=True)
     
 elif opcion == 'Campeones':
@@ -638,7 +637,18 @@ elif opcion == 'Campeones':
 
 
         st.subheader(f"Comparacion de {mensaje} con otros campeones")
-                
+        
+        chart = alt.Chart(dfchamp).mark_bar().encode(
+        x=alt.X("Base HP", title="Escalado"),
+        y=alt.Y("Name", title="Campeones", sort=None),
+        color=alt.Color('highlight:N', legend=None, scale=alt.Scale(domain=['normal', 'highlight'], range=['#cccccc', 'lightgreen']))
+        ).properties(
+        title="Comparación de {mensaje} por {roltexto}, Rango de ataque",
+        width=200,
+        height=400
+        )
+        
+        st.altair_chart(chart, use_container_width=True)       
         
     else:
         st.write("Selecciona un campeon de la barra lateral")
