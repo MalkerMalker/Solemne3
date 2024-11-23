@@ -633,6 +633,13 @@ elif opcion == 'Campeones':
                 st.write(manaregniv)
                 st.write(attackdmgpl)
                 
+        st.markdown(
+                """
+                <div style="margin-left: 80px; margin-right: 0px;">
+                   <h3 style="color: white;">Comparar estadisticas</h3>
+                </div>
+                """,
+                unsafe_allow_html=True)
                 
         chart = alt.Chart(dfchamp).mark_line().encode(
             x='Name',
