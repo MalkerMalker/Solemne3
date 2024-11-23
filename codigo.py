@@ -638,8 +638,11 @@ elif opcion == 'Campeones':
 
         st.subheader(f"Comparacion de {mensaje} con otros campeones")
         
+        dfchamp['highlight'] = dfchamp['Name'] == mensaje
+        df_bottom = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
+        
         chart = alt.Chart(dfchamp).mark_bar().encode(
-        x=alt.X("Base HP", title="Escalado"),
+        x=alt.X("Attack range", title="Rango"),
         y=alt.Y("Name", title="Campeones", sort=None),
         color=alt.Color('highlight:N', legend=None, scale=alt.Scale(domain=['normal', 'highlight'], range=['#cccccc', 'lightgreen']))
         ).properties(
