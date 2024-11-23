@@ -633,22 +633,30 @@ elif opcion == 'Campeones':
                 st.write(manaregniv)
                 st.write(attackdmgpl)
                 
-        st.markdown(
-                """
-                <div style="margin-left: 0px; margin-right: 0px;">
-                   <h3 style="color: white;">Comparar estadisticas</h3>
-                </div>
-                """,
-                unsafe_allow_html=True)
-                
-        chart = alt.Chart(dfchamp).mark_bar().encode(
+        st.title('Comparar campeones')
+
+        col1, col2, col3, col4, col5 = st.columns(5)
+        with col1:
+            button_rol = st.button('por Rol')
+        with col2:
+            button_pos = st.button('por Posición')
+        with col3:
+            button_rank = st.button('por Rango')
+        with col4:
+            button_resource = st.button('por Recurso')
+        with col5:
+            button_all = st.button('Todos')
+
+
+
+        
+        champwithlaner = alt.Chart(dfchamp).mark_bar().encode(
             x='Name',
             y=alt.Y('Base HP', sort='ascending'),
-            tooltip=['Name', 'Base HP']  # Mostrar el nombre, HP y categoría en el tooltip
+            tooltip=['Name', 'Base HP']  
         ).interactive() 
         
-        # Mostrar el gráfico en Streamlit
-        st.altair_chart(chart, use_container_width=True)
+        st.altair_chart(champwithlaner, use_container_width=True)
         
     else:
         st.write("Selecciona un campeon de la barra lateral")
