@@ -643,10 +643,9 @@ elif opcion == 'Campeones':
                 
         chart = alt.Chart(dfchamp).mark_bar().encode(
             x='Name',
-            y=alt.Y('Base HP', sort='descending'),  # Ordenar el eje Y de mayor a menor
-            color='category',
-            tooltip=['Name', 'Base HP', 'category']  # Mostrar el nombre, HP y categoría en el tooltip
-        ).interactive()  # Habilita la interactividad (zoom, pan)
+            y=alt.Y('Base HP', sort='descending'),
+            tooltip=['Name', 'Base HP']  # Mostrar el nombre, HP y categoría en el tooltip
+        ).interactive() 
         
         # Mostrar el gráfico en Streamlit
         st.altair_chart(chart, use_container_width=True)
