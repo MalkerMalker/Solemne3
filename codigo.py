@@ -633,38 +633,25 @@ elif opcion == 'Campeones':
                 st.write(manaregniv)
                 st.write(attackdmgpl)
                 
-        if 'df_sorted' not in st.session_state:
-            st.session_state.df_sorted = dfchamp  # Si no hay DataFrame ordenado, el original se mantiene
-
-        # Crear columnas para los botones (5 botones en una fila)
-        col1, col2, col3, col4, col5 = st.columns(5)
+        with st.container():
+            # Crear columnas para los botones (5 botones en una fila)
+            col1, col2, col3, col4, col5 = st.columns(5)
         
-        # Crear los botones
-        with col1:
-            button_rol = st.button('Ordenar por Rol')
+            # Crear los botones
+            with col1:
+                button_rol = st.button('Ordenar por Rol')
         
-        with col2:
-            button_pos = st.button('Ordenar por Posición')
+            with col2:
+                button_pos = st.button('Ordenar por Posición')
         
-        with col3:
-            button_rank = st.button('Ordenar por Rango')
+            with col3:
+                button_rank = st.button('Ordenar por Rango')
         
-        with col4:
-            button_resource = st.button('Ordenar por Recurso')
+            with col4:
+                button_resource = st.button('Ordenar por Recurso')
         
-        with col5:
-            button_all = st.button('Todo')
-
-
-
-        
-            champwithlaner = alt.Chart(dfchamp).mark_bar().encode(
-                x='Name',
-                y=alt.Y('Base HP', sort='ascending'),
-                tooltip=['Name', 'Base HP']  
-            ).interactive() 
-            
-            st.altair_chart(champwithlaner, use_container_width=True)
+            with col5:
+                button_all = st.button('Todo')
             
     else:
         st.write("Selecciona un campeon de la barra lateral")
