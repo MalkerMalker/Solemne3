@@ -635,7 +635,7 @@ elif opcion == 'Campeones':
                 
         st.markdown(
                 """
-                <div style="margin-left: 80px; margin-right: 0px;">
+                <div style="margin-left: 0px; margin-right: 0px;">
                    <h3 style="color: white;">Comparar estadisticas</h3>
                 </div>
                 """,
