@@ -645,8 +645,8 @@ elif opcion == 'Campeones':
             x='Name',
             y=alt.Y('Base HP', sort='descending'),  # Ordenar el eje Y de mayor a menor
             color='category',
-            tooltip=['category', 'value']
-        ).interactive()  # Habilita la interactividad
+            tooltip=['Name', 'Base HP', 'category']  # Mostrar el nombre, HP y categoría en el tooltip
+        ).interactive()  # Habilita la interactividad (zoom, pan)
         
         # Mostrar el gráfico en Streamlit
         st.altair_chart(chart, use_container_width=True)
