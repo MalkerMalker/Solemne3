@@ -446,11 +446,11 @@ elif opcion == 'Campeones':
             tagtexto2 = "‎ "
 
         
-        range = dfchamp.loc[dfchamp["Name"] == mensaje, "Range type"].values[0]
-        if range == "Melee":
+        ranger = dfchamp.loc[dfchamp["Name"] == mensaje, "Range type"].values[0]
+        if ranger == "Melee":
             rangeimagen = "imagenes/assets/melee.png"
             rangetexto = "Cuerpo a cuerpo"
-        elif range == "Ranged":
+        elif ranger == "Ranged":
             rangeimagen = "imagenes/assets/rango.png"
             rangetexto = "Distancia"
 
