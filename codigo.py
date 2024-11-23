@@ -633,31 +633,31 @@ elif opcion == 'Campeones':
                 st.write(manaregniv)
                 st.write(attackdmgpl)
                 
-        st.title('Comparar campeones')
-
-        col1, col2, col3, col4, col5 = st.columns(5)
-        with col1:
-            button_rol = st.button('por Rol')
-        with col2:
-            button_pos = st.button('por Posición')
-        with col3:
-            button_rank = st.button('por Rango')
-        with col4:
-            button_resource = st.button('por Recurso')
-        with col5:
-            button_all = st.button('Todos')
+            st.title('Comparar campeones')
+    
+            col1, col2, col3, col4, col5 = st.columns(5)
+            with col1:
+                button_rol = st.button('por Rol')
+            with col2:
+                button_pos = st.button('por Posición')
+            with col3:
+                button_rank = st.button('por Rango')
+            with col4:
+                button_resource = st.button('por Recurso')
+            with col5:
+                button_all = st.button('Todos')
 
 
 
         
-        champwithlaner = alt.Chart(dfchamp).mark_bar().encode(
-            x='Name',
-            y=alt.Y('Base HP', sort='ascending'),
-            tooltip=['Name', 'Base HP']  
-        ).interactive() 
-        
-        st.altair_chart(champwithlaner, use_container_width=True)
-        
+            champwithlaner = alt.Chart(dfchamp).mark_bar().encode(
+                x='Name',
+                y=alt.Y('Base HP', sort='ascending'),
+                tooltip=['Name', 'Base HP']  
+            ).interactive() 
+            
+            st.altair_chart(champwithlaner, use_container_width=True)
+            
     else:
         st.write("Selecciona un campeon de la barra lateral")
 
