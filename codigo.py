@@ -639,19 +639,23 @@ elif opcion == 'Campeones':
         st.subheader(f"Comparacion de {mensaje} con otros campeones")
         
         dfchamp['highlight'] = dfchamp['Name'] == mensaje
+        
+        # Filtrar los campeones por rol (asegúrate de que role1 esté definido correctamente)
         df_bottom = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
         
+        # Crear el gráfico de Altair
         chart = alt.Chart(df_bottom).mark_bar().encode(
-        x=alt.X("Attack range", title="Rango"),
-        y=alt.Y("Name", title="Campeones", sort=None),
-        color=alt.Color('highlight:N', legend=None, scale=alt.Scale(domain=['normal', 'highlight'], range=['#cccccc', 'lightgreen']))
+            x=alt.X("Attack range", title="Rango"),
+            y=alt.Y("Name", title="Campeones", sort=None),
+            color=alt.Color('highlight:N', legend=None, scale=alt.Scale(domain=['False', 'True'], range=['#cccccc', 'lightgreen']))
         ).properties(
-        title=f"Comparación de {mensaje} por {roltexto}, Rango de ataque",
-        width=200,
-        height=400
+            title=f"Comparación de {mensaje} por {roltexto}, Rango de ataque",
+            width=500,  # Ajusta el tamaño de la gráfica si es necesario
+            height=400
         )
         
-        st.altair_chart(chart, use_container_width=True)       
+        # Mostrar el gráfico en Streamlit
+        st.altair_chart(chart, use_container_width=True)    
         
     else:
         st.write("Selecciona un campeon de la barra lateral")
