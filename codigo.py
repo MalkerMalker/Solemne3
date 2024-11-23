@@ -635,8 +635,8 @@ elif opcion == 'Campeones':
                 
                 
         chart = alt.Chart(dfchamp).mark_line().encode(
-            x='Base HP',
-            y='Name'
+            x='Name',
+            y='Base HP'
         )
         
         # Mostrar el gráfico en Streamlit
