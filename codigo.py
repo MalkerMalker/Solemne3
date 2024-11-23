@@ -643,7 +643,7 @@ elif opcion == 'Campeones':
                 
         chart = alt.Chart(dfchamp).mark_bar().encode(
             x='Name',
-            y=alt.Y('Base HP', sort='descending'),
+            y=alt.Y('Base HP', sort='ascending'),
             tooltip=['Name', 'Base HP']  # Mostrar el nombre, HP y categoría en el tooltip
         ).interactive() 
         
