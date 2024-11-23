@@ -634,7 +634,7 @@ elif opcion == 'Campeones':
                 st.write(attackdmgpl)
                 
         if 'df_sorted' not in st.session_state:
-            st.session_state.df_sorted = df  # Si no hay DataFrame ordenado, el original se mantiene
+            st.session_state.df_sorted = dfchamp  # Si no hay DataFrame ordenado, el original se mantiene
 
         # Crear columnas para los botones (5 botones en una fila)
         col1, col2, col3, col4, col5 = st.columns(5)
