@@ -505,6 +505,9 @@ elif opcion == 'Campeones':
         mrlvl = dfchamp.loc[dfchamp["Name"] == mensaje, "Magic resistance per lvl"].values[0]
 
         attackrange = dfchamp.loc[dfchamp["Name"] == mensaje, "Attack range"].values[0]
+
+        hpreg = dfchamp.loc[dfchamp["Name"] == mensaje, "HP regeneration"].values[0]
+        hpregniv = dfchamp.loc[dfchamp["Name"] == mensaje, "HP regeneration"].values[0]
         
         rutaimagen = dfchamp.loc[dfchamp["Name"] == mensaje, "Icono"].values
         rutasplash = dfchamp.loc[dfchamp["Name"] == mensaje, "SplashArt"].values
@@ -559,6 +562,7 @@ elif opcion == 'Campeones':
                 st.write("Arm/Ar+:")
                 st.write("Mr/Mr+:")
                 st.write("Attack R:")
+                st.write("HPReg/+:")
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
@@ -570,6 +574,7 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/armadurabase.png", width=25)
                 st.image("imagenes/assets/resistenciamagica.png", width=25)
                 st.image("imagenes/assets/rangodeataque.png", width=25)
+                st.image("imagenes/assets/healpower.png", width=25)
             with texto:
                 st.write(tagtexto)
                 st.write(roltexto)
@@ -581,6 +586,7 @@ elif opcion == 'Campeones':
                 st.write(armor)
                 st.write(mr)
                 st.write(attackrange)
+                st.write(hpreg)
             with icon_col2:
                 st.image(tagimagen2, width=30)
                 st.image(rolimagen2, width=30)
@@ -592,6 +598,7 @@ elif opcion == 'Campeones':
                 st.image("imagenes/assets/armadurabase.png", width=25)
                 st.image("imagenes/assets/resistenciamagica.png", width=25)
                 st.image("imagenes/assets/invisible.png",width=25)
+                st.image("imagenes/assets/healpower.png", width=25)
             with texto2:
                 st.write(tagtexto2)  
                 st.write(roltexto2)
@@ -603,6 +610,7 @@ elif opcion == 'Campeones':
                 st.write(armorlvl)
                 st.write(mrlvl)
                 st.write(txtinvisible)
+                st.write(hpregniv)
                 
         chart = alt.Chart(dfinf).mark_bar().encode(
         x=alt.X("Playing", title="Escalado de recurso"),
