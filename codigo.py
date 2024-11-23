@@ -643,7 +643,7 @@ elif opcion == 'Campeones':
         y=alt.Y("Name", title="Campeones", sort=None),
         color=alt.Color('highlight:N', legend=None, scale=alt.Scale(domain=['normal', 'highlight'], range=['#cccccc', 'lightgreen']))
         ).properties(
-        title="Comparación de {mensaje} por {roltexto}, Rango de ataque",
+        title=f"Comparación de {mensaje} por {roltexto}, Rango de ataque",
         width=200,
         height=400
         )
