@@ -633,19 +633,27 @@ elif opcion == 'Campeones':
                 st.write(manaregniv)
                 st.write(attackdmgpl)
                 
-            st.title('Comparar campeones')
-    
-            col1, col2, col3, col4, col5 = st.columns(5)
-            with col1:
-                button_rol = st.button('por Rol')
-            with col2:
-                button_pos = st.button('por Posición')
-            with col3:
-                button_rank = st.button('por Rango')
-            with col4:
-                button_resource = st.button('por Recurso')
-            with col5:
-                button_all = st.button('Todos')
+        if 'df_sorted' not in st.session_state:
+            st.session_state.df_sorted = df  # Si no hay DataFrame ordenado, el original se mantiene
+
+        # Crear columnas para los botones (5 botones en una fila)
+        col1, col2, col3, col4, col5 = st.columns(5)
+        
+        # Crear los botones
+        with col1:
+            button_rol = st.button('Ordenar por Rol')
+        
+        with col2:
+            button_pos = st.button('Ordenar por Posición')
+        
+        with col3:
+            button_rank = st.button('Ordenar por Rango')
+        
+        with col4:
+            button_resource = st.button('Ordenar por Recurso')
+        
+        with col5:
+            button_all = st.button('Todo')
 
 
 
