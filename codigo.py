@@ -634,16 +634,11 @@ elif opcion == 'Campeones':
                 st.write(attackdmgpl)
                 
                 
-        chart = alt.Chart(dfchamp).mark_bar().encode(
-        x=alt.X("Base HP", title="Escalado de recurso"),
-        y=alt.Y("Name", title=f"Campeones", sort=None),
-        color=alt.Color('highlight:N', legend=None, scale=alt.Scale(domain=['normal', 'highlight'], range=['#cccccc', 'lightgreen']))
-        ).properties(
-        title=f"Comparacion de {mensaje} con todos los {roltexto}",
-        width=200,
-        height=40
+        chart = alt.Chart(dfchamp).mark_line().encode(
+            x='Base HP',
+            y='Name'
         )
-    
+        
         # Mostrar el gráfico en Streamlit
         st.altair_chart(chart, use_container_width=True)
         
