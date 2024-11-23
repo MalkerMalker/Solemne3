@@ -566,6 +566,8 @@ elif opcion == 'Campeones':
                 st.write("Mr/Mr+:")
                 st.write("Attack R:")
                 st.write("HPReg/+:")
+                st.write("M Reg/+:")
+                
             with icon_col1:
                 st.image(tagimagen, width=30)
                 st.image(rolimagen, width=30)
