@@ -635,6 +635,9 @@ elif opcion == 'Campeones':
                 st.write(hpregniv)
                 st.write(manaregniv)
                 st.write(attackdmgpl)
+
+
+        st.title(f"Comparacion de {mensaje} con los de {role1}")
                 
         
     else:
