@@ -637,7 +637,7 @@ elif opcion == 'Campeones':
                 st.write(attackdmgpl)
 
 
-        st.header(f"Comparacion de {mensaje} con los de {roltexto}")
+        st.subheader(f"Comparacion de {mensaje} con los de {roltexto}")
                 
         
     else:
