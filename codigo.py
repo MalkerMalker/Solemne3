@@ -887,6 +887,13 @@ elif opcion == 'Campeones':
             ejey5 = np.array(dfchampordenado5["Name"])
             highlight5 = np.array(dfchampordenado5["highlight"])
 
+
+        data = pd.DataFrame({
+            'Attack range': ejex1,
+            'Name': ejey1,
+            'highlight': highlight1
+        })
+
         line_chart = alt.Chart(data).mark_line().encode(
             x='Attack range',
             y=alt.Y('Name', sort=None)  # Mantener el orden tal como está en los datos
