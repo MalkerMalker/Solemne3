@@ -805,6 +805,7 @@ elif opcion == 'Campeones':
                     'Champion': [row['Name']] * 18
                 })
                 level_data4 = pd.concat([level_data4, champion_data])
+            level_data4['highlight'] = level_data4['Champion'] == mensaje
             highlight4 = np.array(level_data4["highlight"])
             ejex4 = np.array(level_data4['Level'])
             ejey4 = np.array(level_data4['Base magic resistance'])
