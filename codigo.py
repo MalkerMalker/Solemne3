@@ -884,7 +884,21 @@ elif opcion == 'Campeones':
             dfchampordenado5 = dfchampordenado5.sort_values(by='Movement speed', ascending=True)
             ejex5 = np.array(dfchampordenado5["Movement speed"])
             ejey5 = np.array(dfchampordenado5["Name"])
-            highlight5 = np.array(dfchampordenado5["highlight"])   
+            highlight5 = np.array(dfchampordenado5["highlight"])
+
+        line_chart = alt.Chart(data).mark_line().encode(
+            x=ejex1,
+            y=ejey1
+        )
+
+        highlight_point = alt.Chart(data).mark_point(size=100, color='red').encode(
+            x='x',
+            y='y'
+        ).transform_filter(
+            alt.datum.highlight  
+        )
+        chart = line_chart + highlight_point
+        chart
         
     else:
         st.write("Selecciona un campeon de la barra lateral")
