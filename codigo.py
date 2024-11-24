@@ -888,15 +888,23 @@ elif opcion == 'Campeones':
             highlight5 = np.array(dfchampordenado5["highlight"])
 
 
+        # Crear un DataFrame a partir de los datos
         data = pd.DataFrame({
             'Attack range': ejex1,
             'Name': ejey1,
             'highlight': highlight1
         })
-
+        
+        # Ordenar los datos de menor a mayor por 'Attack range'
+        data = data.sort_values(by='Attack range')
+        
+        # Crear el gráfico de líneas
         line_chart = alt.Chart(data).mark_line().encode(
-            x='Attack range',
-            y=alt.Y('Name', sort=None)  # Mantener el orden tal como está en los datos
+            x=alt.X('Attack range', title="Attack Range", scale=alt.Scale(zero=False)),  # Eje x más amplio
+            y=alt.Y('Name', title="Champion", sort=None)  # Mantener el orden del DataFrame
+        ).properties(
+            width=800,  # Ancho del gráfico
+            height=300  # Alto del gráfico
         )
         
         # Crear el punto destacado
