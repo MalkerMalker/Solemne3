@@ -808,7 +808,7 @@ elif opcion == 'Campeones':
             level_data4['highlight'] = level_data4['Champion'] == mensaje
             highlight4 = np.array(level_data4["highlight"])
             ejex4 = np.array(level_data4['Level'])
-            ejey4 = np.array(level_data4['Base magic resistance'])
+            ejey4 = np.array(level_data4['Mana'])
         
         elif comparar2 == "Velocidad de ataque ratio":
             df_filtered4 = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
