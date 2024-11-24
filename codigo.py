@@ -887,16 +887,19 @@ elif opcion == 'Campeones':
             highlight5 = np.array(dfchampordenado5["highlight"])
 
         line_chart = alt.Chart(data).mark_line().encode(
-            x=ejex1,
-            y=ejey1
+            x='Attack range',
+            y=alt.Y('Name', sort=None)  # Mantener el orden tal como está en los datos
         )
-
+        
+        # Crear el punto destacado
         highlight_point = alt.Chart(data).mark_point(size=100, color='red').encode(
-            x='x',
-            y='y'
+            x='Attack range',
+            y='Name'
         ).transform_filter(
-            alt.datum.highlight  
+            alt.datum.highlight  # Filtrar solo los puntos destacados
         )
+        
+        # Combinar ambos gráficos
         chart = line_chart + highlight_point
         chart
         
