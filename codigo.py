@@ -491,6 +491,9 @@ elif opcion == 'Campeones':
         elif rtype == "z":
             rtypeimagen = "imagenes/assets/manaless.png"
             rtypetexto = "‎Sin recurso"
+        elif rtype == "Rage":
+            rtypeimagen = "imagenes/assets/furia.png"
+            rtypetexto = "Enojo"
 
         hpbase = dfchamp.loc[dfchamp["Name"] == mensaje, "Base HP"].values[0]
         hpnivel = dfchamp.loc[dfchamp["Name"] == mensaje, "HP per lvl"].values[0]
