@@ -507,6 +507,7 @@ elif opcion == 'Campeones':
         mrlvl = dfchamp.loc[dfchamp["Name"] == mensaje, "Magic resistance per lvl"].values[0]
 
         attackrange = dfchamp.loc[dfchamp["Name"] == mensaje, "Attack range"].values[0]
+        lore = dfchamp.loc[dfchamp["Name"] == mensaje, "Informacion"].values[0]
 
         hpreg = dfchamp.loc[dfchamp["Name"] == mensaje, "HP regeneration"].values[0]
         hpregniv = dfchamp.loc[dfchamp["Name"] == mensaje, "HP regeneration"].values[0]
@@ -551,7 +552,7 @@ elif opcion == 'Campeones':
                 """,
                 unsafe_allow_html=True
             )
-            st.write("adsdsadsa")
+            st.write(lore)
         
         with col2:
             st.markdown(
