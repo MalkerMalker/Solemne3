@@ -1,8 +1,0 @@
-pandas
-matplotlib
-streamlit
-webbrowser
-numpy
-base64
-altair
-matplotlib.pyplot
