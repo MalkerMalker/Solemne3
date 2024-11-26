@@ -973,9 +973,9 @@ elif opcion == 'Acerca de':
 
     st.markdown(
         """
-        <div style="margin: 0 25px; text-align: right;">
-            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Carrera</h3>
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px;">Ingeniería Civil Informática</p>
+        <div style="margin: 0 20px; margin-bottom: 10px;">
+            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px;">Monica Otero Ferreiro</p>
         </div>
         """,
         unsafe_allow_html=True
