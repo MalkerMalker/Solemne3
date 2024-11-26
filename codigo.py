@@ -802,9 +802,9 @@ elif opcion == 'Campeones':
 
         # Crear un DataFrame a partir de los datos
         fig1, ax1 = plt.subplots()
-        ax1.plot(ejex1, ejey1, label="Estadisticas")
-        ax1.scatter(highlightx1, highlighty1, color="red", label="Destacado")
-        ax1.axhline(highlighty1, color="red", linestyle='--', label=mensaje)
+        ax1.plot(ejex1, ejey1, label="Estadisticas",color="lightgreen")
+        ax1.scatter(highlightx1, highlighty1, color="red", label=mensaje)
+        ax1.axhline(highlighty1, color="red", linestyle='--')
         ax1.tick_params(axis='both', which='major', labelsize=8)
         ax1.set_title(title)
         ax1.legend()
@@ -821,8 +821,8 @@ elif opcion == 'Campeones':
         
         fig3, ax3 = plt.subplots()
         ax3.plot(ejex3, ejey3, label="Estadisticas",color="lightgreen")
-        ax3.scatter(highlightx3, highlighty3, color="red", label="Estadisticas")
-        ax3.axhline(highlighty3, color="red", linestyle='--', label=mensaje)
+        ax3.scatter(highlightx3, highlighty3, color="red", label=mensaje)
+        ax3.axhline(highlighty3, color="red", linestyle='--',)
         ax3.tick_params(axis='both', which='major', labelsize=8)
         ax3.set_title(title3)
         ax3.legend()
