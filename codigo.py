@@ -971,7 +971,7 @@ elif opcion == 'Acerca de':
         unsafe_allow_html=True
 )
 
-        st.markdown(
+    st.markdown(
         """
         <div style="margin: 0 25px; text-align: right;">
             <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Carrera</h3>
