@@ -829,7 +829,7 @@ elif opcion == 'Campeones':
         st.pyplot(fig3)
         
     else:
-        st.title("Selecciona un campeon de la barra lateral")
+        st.markdown("<h1 style='font-size: 40px;'>Selecciona un campeon de la barra lateral</h1>", unsafe_allow_html=True)
 
 
 elif opcion == 'Competitivo':
