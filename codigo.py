@@ -977,8 +977,7 @@ elif opcion == 'Acerca de':
     st.markdown(
         """
         <div style="margin: 0 20px; margin-bottom: 10px;">
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px;">
-League of Legends (LoL) es un juego de estrategia en tiempo real y multijugador desarrollado y publicado por Riot Games. Fue lanzado el 27 de octubre de 2009 y se ha convertido en uno de los juegos más populares y jugados del mundo. A continuación te explico en qué consiste el juego:</p>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px;">Todos los derechos reservados a la empresa de Riot Games, creadora del juego League Of Legends.</p>
         </div>
         """,
         unsafe_allow_html=True
