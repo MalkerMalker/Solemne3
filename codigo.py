@@ -704,7 +704,7 @@ elif opcion == 'Campeones':
             highlight2 = np.array(dfchampordenado2["highlight"])
         
         elif comparar2 == "Mana":
-            title = (f"Comparación de {mensaje} con campeones de {role1} de {comparar2}")
+            title2 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar2}")
             df_filtered2 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
             dfchampordenado2 = df_filtered2.sort_values(by="Base mana", ascending=True)
             dfchampordenado2["Fila"] = range(1, len(dfchampordenado2) + 1)
