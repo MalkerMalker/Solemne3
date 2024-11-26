@@ -646,283 +646,175 @@ elif opcion == 'Campeones':
         dfrol = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
         
         if role1 == "Top":
-            comparartodo = "Rango de ataque"
-            comparartodo2 = "Velocidad de ataque"
-            comparar = "Escalado de vida"
-            comparar2 = "Escalado de Resistencia magica"
-            comparar3 = "Escalado de Armadura"
+            comparar = "HP Base"
+            comparar2 = "Resistencia Magica"
+            comparar3 = "Armadura"
         elif role1 == "Middle":
-            comparartodo = "Daño de ataque"
-            comparartodo2 = "Velocidad de movimiento"
-            comparar = "Escalado de vida"
-            comparar2 = "Escalado de mana"
+            comparar = "HP Base"
+            comparar2 = "Mana"
             comparar3 = "Daño de ataque"
         elif role1 == "Bottom":
-            comparartodo = "Escalado de vida"
-            comparartodo2 = "Velocidad de movimiento"
             comparar = "Daño de ataque"
-            comparar2 = "Velocidad de ataque ratio"
+            comparar2 = "Rango de ataque"
             comparar3 = "Velocidad de ataque"
         elif role1 == "Support":
-            comparartodo = "Escalado de armadura"
-            comparartodo2 = "Velocidad de movimiento"
-            comparar = "Escalado de vida"
+            comparar = "HP Base"
             comparar2 = "Regeneración de vida"
             comparar3 = "Regeneracion de mana"
         elif role1 == "Jungle":
-            comparartodo = "Rango de ataque"
-            comparartodo2 = "Escalado de armadura"
-            comparar = "Escalado de vida"
+            comparar = "HP Base"
             comparar2 = "Daño de ataque"
             comparar3 = "Velocidad de movimiento"
         
         
         #Primer grafico informacion
-        if comparartodo == "Rango de ataque":
-            dfchampordenado = dfchamp.sort_values(by='Attack range', ascending=True)
-            ejex1 = np.array(dfchampordenado["Attack range"])
-            ejey1 = np.array(dfchampordenado["Name"])
-            highlight1 = np.array(dfchampordenado["highlight"])
-        elif comparartodo == "Daño de ataque":
-            dfchampordenado = dfchamp.sort_values(by='Attack damage', ascending=True)
-            ejex1 = np.array(dfchampordenado["Attack damage"])
-            ejey1 = np.array(dfchampordenado["Name"])
-            highlight1 = np.array(dfchampordenado["highlight"])
-        elif comparartodo == "Escalado de vida":
-            level_data = pd.DataFrame()
-            levels = list(range(1, 19))
-            for index, row in dfchamp.iterrows():
-                base_hp = row['Base HP']
-                hp_per_level = row['HP per lvl']
-                hp_values = [base_hp + (level - 1) * hp_per_level for level in levels]
-                champion_data = pd.DataFrame({
-                    'Level': levels,
-                    'HP': hp_values,
-                    'Champion': [row['Name']] * 18
-                })
-                level_data = pd.concat([level_data, champion_data])
-            level_data['highlight'] = level_data['Champion'] == mensaje
-            highlight1 = np.array(level_data["highlight"])
-            ejex1 = np.array(level_data['Level'])
-            ejey1 = np.array(level_data['HP'])
-        elif comparartodo == "Escalado de armadura":
-            level_data = pd.DataFrame()
-            levels = list(range(1, 19))
-            for index, row in dfchamp.iterrows():
-                base_armor = row['Base armor']
-                armor_per_level = row['Armor per lvl']
-                armor_values = [base_armor + (level - 1) * armor_per_level for level in levels]
-                champion_data = pd.DataFrame({
-                    'Level': levels,
-                    'Armor': armor_values,
-                    'Champion': [row['Name']] * 18
-                })
-                level_data = pd.concat([level_data, champion_data])
-            level_data['highlight'] = level_data['Champion'] == mensaje
-            ejex1 = np.array(level_data['Level'])
-            ejey1 = np.array(level_data['Armor'])
-            highlight1 = np.array(level_data["highlight"])
+        if comparar == "HP Base":
+            title = (f"Comparación de {mensaje} con campeones de {role1} de {comparar}")
+            df_filtered1 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado1 = df_filtered1.sort_values(by="Base HP", ascending=True)
+            dfchampordenado1["Fila"] = range(1, len(dfchampordenado1) + 1)
+            highlighty1 = dfchampordenado1.loc[dfchampordenado1["Name"] == mensaje, "Fila"].values[0]
+            highlightx1 = dfchampordenado1.loc[dfchampordenado1["Name"] == mensaje, "Base HP"].values[0]
+            ejex1 = np.array(dfchampordenado1["Base HP"])
+            ejey1 = np.array(dfchampordenado1["Name"])
+            
         
-        ###################################
-        if comparartodo2 == "Velocidad de ataque":
-            dfchampordenado2 = dfchamp.sort_values(by='Attack range', ascending=True)
+        elif comparar == "Daño de ataque":
+            title = (f"Comparación de {mensaje} con campeones de {role1} de {comparar}")
+            df_filtered1 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado1 = df_filtered1.sort_values(by="Attack damage", ascending=True)
+            dfchampordenado1["Fila"] = range(1, len(dfchampordenado1) + 1)
+            highlighty1 = dfchampordenado1.loc[dfchampordenado1["Name"] == mensaje, "Fila"].values[0]
+            highlightx1 = dfchampordenado1.loc[dfchampordenado1["Name"] == mensaje, "Attack damage"].values[0]
+            ejex1 = np.array(dfchampordenado1["Attack damage"])
+            ejey1 = np.array(dfchampordenado1["Name"])
+        
+        
+        ############2222222222222222222222
+        if comparar2 == "Resistencia Magica":
+            title2 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar2}")
+            df_filtered2 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado2 = df_filtered2.sort_values(by="Base magic resistance", ascending=True)
+            dfchampordenado2["Fila"] = range(1, len(dfchampordenado2) + 1)
+            highlighty2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Fila"].values[0]
+            highlightx2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Base magic resistance"].values[0]
+            ejex2 = np.array(dfchampordenado2["Base magic resistance"])
+            ejey2 = np.array(dfchampordenado2["Name"])
+            highlight2 = np.array(dfchampordenado2["highlight"])
+        
+        elif comparar2 == "Mana":
+            title = (f"Comparación de {mensaje} con campeones de {role1} de {comparar2}")
+            df_filtered2 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado2 = df_filtered2.sort_values(by="Base mana", ascending=True)
+            dfchampordenado2["Fila"] = range(1, len(dfchampordenado2) + 1)
+            highlighty2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Fila"].values[0]
+            highlightx2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Base mana"].values[0]
+            ejex2 = np.array(dfchampordenado2["Base mana"])
+            ejey2 = np.array(dfchampordenado2["Name"])
+        
+        elif comparar2 == "Rango de ataque":
+            title2 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar2}")
+            df_filtered2 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado2 = df_filtered2.sort_values(by="Attack range", ascending=True)
+            dfchampordenado2["Fila"] = range(1, len(dfchampordenado2) + 1)
+            highlighty2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Fila"].values[0]
+            highlightx2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Attack range"].values[0]
             ejex2 = np.array(dfchampordenado2["Attack range"])
             ejey2 = np.array(dfchampordenado2["Name"])
-            highlight2 = np.array(dfchampordenado2["highlight"])
-        elif comparartodo2 == "Velocidad de movimiento":
-            dfchampordenado2 = dfchamp.sort_values(by='Attack damage', ascending=True)
+        
+        elif comparar2 == "Regeneración de vida":
+            title2 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar2}")
+            df_filtered2 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado2 = df_filtered2.sort_values(by="HP regeneration", ascending=True)
+            dfchampordenado2["Fila"] = range(1, len(dfchampordenado2) + 1)
+            highlighty2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Fila"].values[0]
+            highlightx2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "HP regeneration"].values[0]
+            ejex2 = np.array(dfchampordenado2["HP regeneration"])
+            ejey2 = np.array(dfchampordenado2["Name"])
+        
+        elif comparar2 == "Daño de ataque":
+            title2 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar2}")
+            df_filtered2 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado2 = df_filtered2.sort_values(by="Attack damage", ascending=True)
+            dfchampordenado2["Fila"] = range(1, len(dfchampordenado2) + 1)
+            highlighty2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Fila"].values[0]
+            highlightx2 = dfchampordenado2.loc[dfchampordenado2["Name"] == mensaje, "Attack damage"].values[0]
             ejex2 = np.array(dfchampordenado2["Attack damage"])
             ejey2 = np.array(dfchampordenado2["Name"])
-            highlight2 = np.array(dfchampordenado2["highlight"])
-        elif comparartodo2 == "Escalado de armadura":
-            level_data2 = pd.DataFrame()
-            levels = list(range(1, 19))
-            for index, row in dfchamp.iterrows():
-                base_armor2 = row['Base armor']
-                armor_per_level2 = row['Armor per lvl']
-                armor_values2 = [base_armor2 + (level2 - 1) * armor_per_level2 for level2 in levels]
-                champion_data2 = pd.DataFrame({
-                    'Level': levels,
-                    'Armor': armor_values2,
-                    'Champion': [row['Name']] * 18 
-                })
-                level_data2 = pd.concat([level_data2, champion_data2])
-            level_data2['highlight'] = level_data2['Champion'] == mensaje
-            ejex2 = np.array(level_data2['Level'])
-            ejey2 = np.array(level_data2['Armor'])
-            highlight2 = np.array(level_data2['highlight'])
-        ###################################################### comparar por 
-        if comparar == "Escalado de vida":
-            level_data3 = pd.DataFrame()
-            levels = list(range(1, 19))
-            df_filtered = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
-            for index, row in df_filtered.iterrows():
-                base_hp3 = row['Base HP']
-                hp_per_level3 = row['HP per lvl']
-                hp_values3 = [base_hp3 + (level - 1) * hp_per_level3 for level in levels]
-                champion_data = pd.DataFrame({
-                    'Level': levels,
-                    'HP': hp_values3,
-                    'Champion': [row['Name']] * 18
-                })
-                level_data3 = pd.concat([level_data3, champion_data])
-            level_data3['highlight'] = level_data3['Champion'] == mensaje
-            highlight3 = np.array(level_data3["highlight"])
-            ejex3 = np.array(level_data3['Level'])
-            ejey3 = np.array(level_data3['HP'])
-        elif comparar == "Daño de ataque":
-            df_filtered3 = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
+        ###########33333333333333333333333
+        
+        if comparar3 == "Armadura":
+            title3 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar3}")
+            df_filtered3 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado3 = df_filtered3.sort_values(by="Base armor", ascending=True)
+            dfchampordenado3["Fila"] = range(1, len(dfchampordenado3) + 1)
+            highlighty3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Fila"].values[0]
+            highlightx3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Base armor"].values[0]
+            ejex3 = np.array(dfchampordenado3["Base armor"])
+            ejey3 = np.array(dfchampordenado3["Name"])
+            highlight3 = np.array(dfchampordenado3["highlight"])
+        
+        elif comparar3 == "Daño de ataque":
+            title3 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar3}")
+            df_filtered3 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
             dfchampordenado3 = df_filtered3.sort_values(by="Attack damage", ascending=True)
+            dfchampordenado3["Fila"] = range(1, len(dfchampordenado3) + 1)
+            highlighty3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Fila"].values[0]
+            highlightx3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Attack damage"].values[0]
             ejex3 = np.array(dfchampordenado3["Attack damage"])
             ejey3 = np.array(dfchampordenado3["Name"])
             highlight3 = np.array(dfchampordenado3["highlight"])
         
-        ############################
-        if comparar2 == "Escalado de Resistencia magica":
-            level_data4 = pd.DataFrame()
-            levels = list(range(1, 19))
-            for index, row in dfchamp.iterrows():
-                base_mr4 = row['Base magic resistance']
-                mr_per_level4 = row['Magic resistance per lvl']
-                mr_values4 = [base_mr4 + (level - 1) * mr_per_level4 for level in levels]
-                champion_data = pd.DataFrame({
-                    'Level': levels,
-                    'MR': mr_values4,
-                    'Champion': [row['Name']] * 18  
-                })
-                level_data4 = pd.concat([level_data4, champion_data])
-            level_data4['highlight'] = level_data4['Champion'] == mensaje
-            highlight4 = np.array(level_data4['highlight'])
-            ejex4 = np.array(level_data4['Level'])
-            ejey4 = np.array(level_data4['MR'])
-        
-        elif comparar2 == "Escalado de mana":
-            level_data4 = pd.DataFrame()
-            levels = list(range(1, 19))
-            for index, row in dfchamp.iterrows():
-                base_mana4 = row['Base mana']
-                mana_per_level4 = row['Mana per lvl']
-                mana_values4 = [base_mana4 + (level - 1) * mana_per_level4 for level in levels]
-                champion_data = pd.DataFrame({
-                    'Level': levels,
-                    'Mana': mana_values4,
-                    'Champion': [row['Name']] * 18
-                })
-                level_data4 = pd.concat([level_data4, champion_data])
-            level_data4['highlight'] = level_data4['Champion'] == mensaje
-            highlight4 = np.array(level_data4["highlight"])
-            ejex4 = np.array(level_data4['Level'])
-            ejey4 = np.array(level_data4['Mana'])
-        
-        elif comparar2 == "Velocidad de ataque ratio":
-            df_filtered4 = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
-            dfchampordenado = df_filtered4.sort_values(by="AS ratio", ascending=True)
-            ejex4 = np.array(dfchampordenado["AS ratio"])
-            ejey4 = np.array(dfchampordenado["Name"])
-            highlight4 = np.array(dfchampordenado["highlight"])
-        
-        elif comparar2 == "Regeneración de vida":
-            df_filtered4 = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
-            dfchampordenado = df_filtered4.sort_values(by="HP regeneration", ascending=True)
-            ejex4 = np.array(dfchampordenado["HP regeneration"])
-            ejey4 = np.array(dfchampordenado["Name"])
-            highlight4 = np.array(dfchampordenado["highlight"])
-        
-        elif comparar2 == "Daño de ataque":
-            df_filtered4 = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
-            dfchampordenado = df_filtered4.sort_values(by="Attack damage", ascending=True)
-            ejex4 = np.array(dfchampordenado["Attack damage"])
-            ejey4 = np.array(dfchampordenado["Name"])
-            highlight4 = np.array(dfchampordenado["highlight"])
-        ###################################
-        if comparar3 == "Escalado de Armadura":
-            level_data5 = pd.DataFrame()
-            levels = list(range(1, 19))
-            for index, row in dfchamp.iterrows():
-                base_armor5 = row['Base armor']
-                armor_per_level5 = row['Armor per lvl']
-                armor_values5 = [base_armor5 + (level5 - 1) * armor_per_level5 for level5 in levels]
-                champion_data5 = pd.DataFrame({
-                    'Level': levels,
-                    'Armor': armor_values5,
-                    'Champion': [row['Name']] * 18 
-                })
-                level_data5 = pd.concat([level_data5, champion_data5])
-            level_data5['highlight'] = level_data5['Champion'] == mensaje
-            ejex5 = np.array(level_data5['Level'])
-            ejey5 = np.array(level_data5['Armor'])
-            highlight5 = np.array(level_data5['highlight'])
-        
-        elif comparar3 == "Daño de ataque":
-            df_filtered5 = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
-            dfchampordenado5 = df_filtered5.sort_values(by="Attack damage", ascending=True)
-            ejex5 = np.array(dfchampordenado5["Attack damage"])
-            ejey5 = np.array(dfchampordenado5["Name"])
-            highlight5 = np.array(dfchampordenado5["highlight"])
-        
         elif comparar3 == "Velocidad de ataque":
-            dfchampordenado5 = dfchamp.sort_values(by='Attack range', ascending=True)
-            ejex5 = np.array(dfchampordenado5["Attack range"])
-            ejey5 = np.array(dfchampordenado5["Name"])
-            highlight5 = np.array(dfchampordenado5["highlight"])
+            title3 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar3}")
+            df_filtered3 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado3 = df_filtered3.sort_values(by="Attack speed", ascending=True)
+            dfchampordenado3["Fila"] = range(1, len(dfchampordenado3) + 1)
+            highlighty3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Fila"].values[0]
+            highlightx3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Attack speed"].values[0]
+            ejex3 = np.array(dfchampordenado3["Attack speed"])
+            ejey3 = np.array(dfchampordenado3["Name"])
+            highlight3 = np.array(dfchampordenado3["highlight"])
         
         elif comparar3 == "Regeneracion de mana":
-            level_data5 = pd.DataFrame()
-            levels = list(range(1, 19))
-            for index, row in dfchamp.iterrows():
-                base_regmana5 = row['Mana regeneration']
-                regmana_per_level5 = row['Mana regeneration per lvl']
-                regmana_values5 = [base_regmana5 + (level5 - 1) * regmana_per_level5 for level5 in levels]
-                champion_data5 = pd.DataFrame({
-                    'Level': levels,
-                    'Regmana': regmana_values5,
-                    'Champion': [row['Name']] * 18 
-                })
-                level_data5 = pd.concat([level_data5, champion_data5])
-            level_data5['highlight'] = level_data5['Champion'] == mensaje
-            ejex5 = np.array(level_data5['Level'])
-            ejey5 = np.array(level_data5['Regmana'])
-            highlight5 = np.array(level_data5['highlight'])
+            title3 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar3}")
+            df_filtered3 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado3 = df_filtered3.sort_values(by="Mana regeneration", ascending=True)
+            dfchampordenado3["Fila"] = range(1, len(dfchampordenado3) + 1)
+            highlighty3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Fila"].values[0]
+            highlightx3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Mana regeneration"].values[0]
+            ejex3 = np.array(dfchampordenado3["Mana regeneration"])
+            ejey3 = np.array(dfchampordenado3["Name"])
+            highlight3 = np.array(dfchampordenado3["highlight"])
         
         elif comparar3 == "Velocidad de movimiento":
-            dfchampordenado5 = dfchamp[dfchamp['Role'].str.contains(role1, case=False, na=False)]
-            dfchampordenado5 = dfchampordenado5.sort_values(by='Movement speed', ascending=True)
-            ejex5 = np.array(dfchampordenado5["Movement speed"])
-            ejey5 = np.array(dfchampordenado5["Name"])
-            highlight5 = np.array(dfchampordenado5["highlight"])
+            title3 = (f"Comparación de {mensaje} con campeones de {role1} de {comparar3}")
+            df_filtered3 = dfchamp[dfchamp["Role"].str.contains(role1, case=False, na=False)]
+            dfchampordenado3 = df_filtered3.sort_values(by="Movement speed", ascending=True)
+            dfchampordenado3["Fila"] = range(1, len(dfchampordenado3) + 1)
+            highlighty3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Fila"].values[0]
+            highlightx3 = dfchampordenado3.loc[dfchampordenado3["Name"] == mensaje, "Movement speed"].values[0]
+            ejex3 = np.array(dfchampordenado3["Movement speed"])
+            ejey3 = np.array(dfchampordenado3["Name"])
+            highlight3 = np.array(dfchampordenado3["highlight"])
 
 
         # Crear un DataFrame a partir de los datos
-        data = pd.DataFrame({
-            'Attack range': ejex1,
-            'Champion': ejey1,
-            'highlight': highlight1
-        })
-        
-        # Ordenar los datos de menor a mayor por 'Attack range'
-        data = data.sort_values(by='Attack range').reset_index(drop=True)
-        
-        # Crear el gráfico de línea
-        line_chart = alt.Chart(data).mark_line().encode(
-            x=alt.X('Attack range', title="Attack Range"),
-            y=alt.Y('Champion', title="Champion", sort=None),  # Orden definido en el DataFrame
-            tooltip=['Champion', 'Attack range']  # Mostrar información al pasar el cursor
-        ).properties(
-            width=600,  # Ancho del gráfico
-            height=400  # Alto del gráfico
-        )
-        
-        # Crear el punto destacado
-        highlight_point = alt.Chart(data).mark_point(size=100, color='red', filled=True).encode(
-            x='Attack range',
-            y='Champion'
-        ).transform_filter(
-            alt.datum.highlight  # Solo mostrar el punto destacado
-        )
-        
-        # Combinar línea y punto
-        chart = line_chart + highlight_point
-        chart
+        plt.plot(ejex1,ejey1)
+        plt.scatter (highlightx1,highlighty1)
+        plt.axhline(highlighty1)
+        plt.title(title)
+        plt.show()
+        plt.plot(ejex2,ejey2)
+        plt.scatter (highlightx2,highlighty2)
+        plt.axhline(highlighty2)
+        plt.title(title2)
+        plt.show()
+        plt.plot(ejex3,ejey3)
+        plt.scatter (highlightx3,highlighty3)
+        plt.axhline(highlighty3)
+        plt.title(title3)
+        plt.show()
         
     else:
         st.write("Selecciona un campeon de la barra lateral")
