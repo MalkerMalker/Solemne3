@@ -829,7 +829,7 @@ elif opcion == 'Campeones':
         st.pyplot(fig3)
         
     else:
-        st.write("Selecciona un campeon de la barra lateral")
+        st.title("Selecciona un campeon de la barra lateral")
 
 
 elif opcion == 'Competitivo':
