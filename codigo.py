@@ -974,8 +974,7 @@ elif opcion == 'Acerca de':
     st.markdown(
         """
         <div style="margin: 0 20px; margin-bottom: 10px;">
-            <h3 style="color: #FFAD33; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2em;">Profesora</h3>
-            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px;">Monica Otero Ferreiro</p>
+            <p style="color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 20px;">League of Legends pertenece a la empresa de Riot Games.</p>
         </div>
         """,
         unsafe_allow_html=True
