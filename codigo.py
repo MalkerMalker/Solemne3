@@ -856,7 +856,7 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>Los Worlds de League of Legends son uno de los eventos de esports más conocidos debido a su audiencia global enorme, alta competitividad, prestigio histórico desde 2011, impresionante producción, participación de equipos icónicos como T1 y G2 Esports, accesibilidad gratuita en múltiples plataformas de streaming y el involucramiento activo de la comunidad con eventos adicionales y contenido exclusivo. Estos factores combinados hacen que sean uno de los eventos más esperados y seguidos en el mundo de los esports. En donde el ganador podra hacerse con la increible copa.
     </div>
     """, unsafe_allow_html=True)
-    st.image("Copa Worlds.jpeg")
+    st.image("imagenes/Copa Worlds.jpeg")
 
     st.markdown(
     """
@@ -874,7 +874,7 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>Los rangos competitivos en League of Legends son una forma de clasificar a los jugadores según su habilidad y rendimiento en el juego. Estos rangos ayudan a emparejar a los jugadores con oponentes de habilidad similar para garantizar partidas justas y equilibradas. Aquí están los rangos competitivos de League of Legends, de menor a mayor:
     </div>
     """, unsafe_allow_html=True)
-    st.image("Rangos Competitivos.png")
+    st.image("imagenes/Rangos Competitivos.png")
     st.markdown("""
     <div style="margin-left: -75px;">
     <div style="margin-right: -75px;">
@@ -882,7 +882,7 @@ elif opcion == 'Competitivo':
         <p style='color: white;'>Bronce es para jugadores que tienen un entendimiento básico del juego pero aún están desarrollando sus habilidades y estrategias. Plata es para jugadores promedio que tienen una buena comprensión del juego pero que todavía están trabajando en perfeccionar sus habilidades y tácticas. Oro es para jugadores por encima del promedio, con una comprensión sólida del juego y habilidades decentes. Este es un rango donde los jugadores comienzan a dominar las mecánicas básicas del juego. Platino es para jugadores habilidosos con una comprensión avanzada del juego y estrategias más refinadas. Aquí es donde los jugadores muestran un alto nivel de competencia. Esmeralda es un rango intermedio entre Platino y Diamante, reservado para jugadores que destacan pero no alcanzan el nivel de los mejores. Diamante es para jugadores altamente habilidosos, considerados entre los mejores del servidor. Estos jugadores tienen un gran conocimiento del juego y habilidades sobresalientes. Maestro es para jugadores de élite que están en la cima del competitivo. Tienen una comprensión profunda del juego y habilidades excepcionales. Gran Maestro es para jugadores que están justo debajo del nivel más alto, mostrando un nivel de competencia extremadamente alto y un dominio casi completo del juego. Challenger es para los mejores jugadores del servidor, en la cúspide del competitivo. Estos jugadores representan la élite absoluta y compiten al más alto nivel. Estos rangos ayudan a emparejar a los jugadores con oponentes de habilidad similar, creando partidas más justas y desafiantes. Cada rango está dividido en divisiones, excepto Maestro, Gran Maestro y Challenger, que no tienen divisiones
     </div>
     """, unsafe_allow_html=True)
-    st.image("Tiers.jpg")
+    st.image("imagenes/Tiers.jpg")
 
     st.markdown(
     """
@@ -910,7 +910,7 @@ elif opcion == 'Competitivo':
     </div>
     """, unsafe_allow_html=True)
 
-    st.image("Faker.jpg")
+    st.image("imagenes/Faker.jpg")
 
     video_url = "https://www.youtube.com/watch?v=rVnbFhnn5z4"
     st.video(video_url)
