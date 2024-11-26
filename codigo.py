@@ -971,6 +971,10 @@ elif opcion == 'Acerca de':
         unsafe_allow_html=True
 )
 
+
+
+
+    
     st.markdown(
         """
         <div style="margin: 0 20px; margin-bottom: 10px;">
