@@ -971,7 +971,7 @@ elif opcion == 'Acerca de':
         unsafe_allow_html=True
 )
 
-     st.write("League of Legends pertenece a Riot Games")
+    st.write("League of Legends pertenece a Riot Games")
 
 
 
